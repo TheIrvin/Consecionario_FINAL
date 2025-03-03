@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using ConsecionarioTecs;
 
 namespace FormularioDeInicio
 {
@@ -111,7 +112,7 @@ namespace FormularioDeInicio
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AbrirEnPanel(new Compras());
+            AbrirEnPanel(new Compra_Proveedor());
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -152,6 +153,11 @@ namespace FormularioDeInicio
             this.Close();
 
             Application.OpenForms["Login"].Show();
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -26,7 +26,7 @@ namespace ConsecionarioTecs
             {
                 Server = "THEIRVIN\\SQLEXPRESS";
                 Database = "CompañiaTecsBDD";
-                Usuario = "AccesoChari";
+                Usuario = "bbd_tecs";
                 Clave = "123456";
             }
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ConsecionarioTecs
 {
-    public partial class AgregarCompras: Form
+    public partial class Compra_Proveedor: Form
     {
-        public AgregarCompras()
+        public Compra_Proveedor()
         {
             InitializeComponent();
         }
@@ -28,6 +28,11 @@ namespace ConsecionarioTecs
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
         {
 
         }

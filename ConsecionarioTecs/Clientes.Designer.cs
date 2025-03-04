@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.lblClientes = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -35,22 +36,26 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.ttlbFiltrar = new System.Windows.Forms.ToolStripLabel();
             this.tstxtFiltrar = new System.Windows.Forms.ToolStripTextBox();
+            this.tsbtnFiltrar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnAgregarCliente = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsBtnModificarCliente = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnImprimir = new System.Windows.Forms.ToolStripButton();
             this.dtgvContendorClientes = new System.Windows.Forms.DataGridView();
             this.panelContenedorClientes = new System.Windows.Forms.Panel();
-            this.tsbtnFiltrar = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnAgregarCliente = new System.Windows.Forms.ToolStripButton();
-            this.tsBtnModificarCliente = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnImprimir = new System.Windows.Forms.ToolStripButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pdrImprimir = new System.Drawing.Printing.PrintDocument();
+            this.imlImagenes = new System.Windows.Forms.ImageList(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvContendorClientes)).BeginInit();
             this.panelContenedorClientes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblClientes
@@ -118,6 +123,15 @@
             this.tstxtFiltrar.Name = "tstxtFiltrar";
             this.tstxtFiltrar.Size = new System.Drawing.Size(110, 25);
             // 
+            // tsbtnFiltrar
+            // 
+            this.tsbtnFiltrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnFiltrar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnFiltrar.Image")));
+            this.tsbtnFiltrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnFiltrar.Name = "tsbtnFiltrar";
+            this.tsbtnFiltrar.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnFiltrar.Text = "toolStripButton1";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -134,20 +148,58 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // tsbtnAgregarCliente
+            // 
+            this.tsbtnAgregarCliente.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAgregarCliente.Image")));
+            this.tsbtnAgregarCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnAgregarCliente.Name = "tsbtnAgregarCliente";
+            this.tsbtnAgregarCliente.Size = new System.Drawing.Size(69, 22);
+            this.tsbtnAgregarCliente.Text = "Agregar";
+            this.tsbtnAgregarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tsbtnAgregarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsBtnModificarCliente
+            // 
+            this.tsBtnModificarCliente.Image = ((System.Drawing.Image)(resources.GetObject("tsBtnModificarCliente.Image")));
+            this.tsBtnModificarCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtnModificarCliente.Name = "tsBtnModificarCliente";
+            this.tsBtnModificarCliente.Size = new System.Drawing.Size(78, 22);
+            this.tsBtnModificarCliente.Text = "Modificar";
+            this.tsBtnModificarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
+            // tsbtnEliminar
+            // 
+            this.tsbtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnEliminar.Image")));
+            this.tsbtnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnEliminar.Name = "tsbtnEliminar";
+            this.tsbtnEliminar.Size = new System.Drawing.Size(70, 22);
+            this.tsbtnEliminar.Text = "Eliminar";
+            this.tsbtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsbtnImprimir
+            // 
+            this.tsbtnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnImprimir.Image")));
+            this.tsbtnImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnImprimir.Name = "tsbtnImprimir";
+            this.tsbtnImprimir.Size = new System.Drawing.Size(73, 22);
+            this.tsbtnImprimir.Text = "Imprimir";
+            this.tsbtnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbtnImprimir.Click += new System.EventHandler(this.tsbtnImprimir_Click);
             // 
             // dtgvContendorClientes
             // 
@@ -170,51 +222,15 @@
             this.panelContenedorClientes.Size = new System.Drawing.Size(800, 418);
             this.panelContenedorClientes.TabIndex = 5;
             // 
-            // tsbtnFiltrar
+            // errorProvider1
             // 
-            this.tsbtnFiltrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnFiltrar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnFiltrar.Image")));
-            this.tsbtnFiltrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnFiltrar.Name = "tsbtnFiltrar";
-            this.tsbtnFiltrar.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnFiltrar.Text = "toolStripButton1";
+            this.errorProvider1.ContainerControl = this;
             // 
-            // tsbtnAgregarCliente
+            // imlImagenes
             // 
-            this.tsbtnAgregarCliente.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAgregarCliente.Image")));
-            this.tsbtnAgregarCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnAgregarCliente.Name = "tsbtnAgregarCliente";
-            this.tsbtnAgregarCliente.Size = new System.Drawing.Size(69, 22);
-            this.tsbtnAgregarCliente.Text = "Agregar";
-            this.tsbtnAgregarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tsbtnAgregarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // tsBtnModificarCliente
-            // 
-            this.tsBtnModificarCliente.Image = ((System.Drawing.Image)(resources.GetObject("tsBtnModificarCliente.Image")));
-            this.tsBtnModificarCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsBtnModificarCliente.Name = "tsBtnModificarCliente";
-            this.tsBtnModificarCliente.Size = new System.Drawing.Size(78, 22);
-            this.tsBtnModificarCliente.Text = "Modificar";
-            this.tsBtnModificarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // tsbtnEliminar
-            // 
-            this.tsbtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnEliminar.Image")));
-            this.tsbtnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnEliminar.Name = "tsbtnEliminar";
-            this.tsbtnEliminar.Size = new System.Drawing.Size(70, 22);
-            this.tsbtnEliminar.Text = "Eliminar";
-            this.tsbtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // tsbtnImprimir
-            // 
-            this.tsbtnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnImprimir.Image")));
-            this.tsbtnImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnImprimir.Name = "tsbtnImprimir";
-            this.tsbtnImprimir.Size = new System.Drawing.Size(73, 22);
-            this.tsbtnImprimir.Text = "Imprimir";
-            this.tsbtnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.imlImagenes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imlImagenes.ImageStream")));
+            this.imlImagenes.TransparentColor = System.Drawing.Color.Transparent;
+            this.imlImagenes.Images.SetKeyName(0, "fondo_niño.jpg");
             // 
             // Clientes
             // 
@@ -235,6 +251,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvContendorClientes)).EndInit();
             this.panelContenedorClientes.ResumeLayout(false);
             this.panelContenedorClientes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,7 +275,12 @@
         private System.Windows.Forms.ToolStripButton tsbtnEliminar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton tsbtnImprimir;
+        private System.Drawing.Printing.PrintDocument prdImprimir;
+
         private System.Windows.Forms.Panel panelContenedorClientes;
         public System.Windows.Forms.DataGridView dtgvContendorClientes;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Drawing.Printing.PrintDocument pdrImprimir;
+        private System.Windows.Forms.ImageList imlImagenes;
     }
 }

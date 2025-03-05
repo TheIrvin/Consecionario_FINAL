@@ -28,31 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CatalogoCliente));
             this.lblCatalogoMotos = new System.Windows.Forms.Label();
             this.lblxCatalogoMotos = new System.Windows.Forms.Label();
             this.panelCatalogoMotos = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelContenedorCatalogo = new System.Windows.Forms.Panel();
-            this.tsCatalogo = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.dtgvContenedorCatalogo = new System.Windows.Forms.DataGridView();
+            this.btnFiltrar = new System.Windows.Forms.Button();
+            this.txtFiltroMotos = new System.Windows.Forms.TextBox();
+            this.flpMotosUsuario = new System.Windows.Forms.FlowLayoutPanel();
             this.panelCatalogoMotos.SuspendLayout();
             this.panelContenedorCatalogo.SuspendLayout();
-            this.tsCatalogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvContenedorCatalogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCatalogoMotos
@@ -80,14 +65,17 @@
             // panelCatalogoMotos
             // 
             this.panelCatalogoMotos.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelCatalogoMotos.Controls.Add(this.txtFiltroMotos);
+            this.panelCatalogoMotos.Controls.Add(this.btnFiltrar);
             this.panelCatalogoMotos.Controls.Add(this.panel2);
             this.panelCatalogoMotos.Controls.Add(this.lblCatalogoMotos);
             this.panelCatalogoMotos.Controls.Add(this.lblxCatalogoMotos);
             this.panelCatalogoMotos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCatalogoMotos.Location = new System.Drawing.Point(0, 0);
             this.panelCatalogoMotos.Name = "panelCatalogoMotos";
-            this.panelCatalogoMotos.Size = new System.Drawing.Size(800, 35);
+            this.panelCatalogoMotos.Size = new System.Drawing.Size(800, 65);
             this.panelCatalogoMotos.TabIndex = 3;
+            this.panelCatalogoMotos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCatalogoMotos_Paint);
             // 
             // panel2
             // 
@@ -100,133 +88,42 @@
             // panelContenedorCatalogo
             // 
             this.panelContenedorCatalogo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panelContenedorCatalogo.Controls.Add(this.dtgvContenedorCatalogo);
-            this.panelContenedorCatalogo.Controls.Add(this.tsCatalogo);
+            this.panelContenedorCatalogo.Controls.Add(this.flpMotosUsuario);
             this.panelContenedorCatalogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedorCatalogo.Location = new System.Drawing.Point(0, 35);
+            this.panelContenedorCatalogo.Location = new System.Drawing.Point(0, 65);
             this.panelContenedorCatalogo.Name = "panelContenedorCatalogo";
-            this.panelContenedorCatalogo.Size = new System.Drawing.Size(800, 415);
+            this.panelContenedorCatalogo.Size = new System.Drawing.Size(800, 385);
             this.panelContenedorCatalogo.TabIndex = 6;
             // 
-            // tsCatalogo
+            // btnFiltrar
             // 
-            this.tsCatalogo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel2,
-            this.toolStripTextBox1,
-            this.toolStripButton1,
-            this.toolStripSeparator6,
-            this.toolStripLabel3,
-            this.toolStripSeparator7,
-            this.toolStripButton2,
-            this.toolStripSeparator8,
-            this.toolStripButton3,
-            this.toolStripSeparator9,
-            this.toolStripButton4,
-            this.toolStripSeparator10,
-            this.toolStripButton5});
-            this.tsCatalogo.Location = new System.Drawing.Point(0, 0);
-            this.tsCatalogo.Name = "tsCatalogo";
-            this.tsCatalogo.Size = new System.Drawing.Size(800, 25);
-            this.tsCatalogo.TabIndex = 0;
-            this.tsCatalogo.Text = "toolStrip2";
+            this.btnFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFiltrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltrar.Image = global::ConsecionarioTecs.Properties.Resources.cabeza;
+            this.btnFiltrar.Location = new System.Drawing.Point(727, 35);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(73, 30);
+            this.btnFiltrar.TabIndex = 6;
+            this.btnFiltrar.Text = "Buscar";
+            this.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFiltrar.UseVisualStyleBackColor = true;
             // 
-            // toolStripLabel2
+            // txtFiltroMotos
             // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(40, 22);
-            this.toolStripLabel2.Text = "Filtrar:";
+            this.txtFiltroMotos.Location = new System.Drawing.Point(611, 45);
+            this.txtFiltroMotos.Name = "txtFiltroMotos";
+            this.txtFiltroMotos.Size = new System.Drawing.Size(116, 20);
+            this.txtFiltroMotos.TabIndex = 7;
             // 
-            // toolStripTextBox1
+            // flpMotosUsuario
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(110, 25);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripLabel3
-            // 
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(58, 22);
-            this.toolStripLabel3.Text = "Acciones:";
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(69, 22);
-            this.toolStripButton2.Text = "Agregar";
-            this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(78, 22);
-            this.toolStripButton3.Text = "Modificar";
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // toolStripSeparator9
-            // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(70, 22);
-            this.toolStripButton4.Text = "Eliminar";
-            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // toolStripSeparator10
-            // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(73, 22);
-            this.toolStripButton5.Text = "Imprimir";
-            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // dtgvContenedorCatalogo
-            // 
-            this.dtgvContenedorCatalogo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvContenedorCatalogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvContenedorCatalogo.Location = new System.Drawing.Point(0, 25);
-            this.dtgvContenedorCatalogo.Name = "dtgvContenedorCatalogo";
-            this.dtgvContenedorCatalogo.Size = new System.Drawing.Size(800, 390);
-            this.dtgvContenedorCatalogo.TabIndex = 3;
+            this.flpMotosUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpMotosUsuario.Location = new System.Drawing.Point(0, 0);
+            this.flpMotosUsuario.Name = "flpMotosUsuario";
+            this.flpMotosUsuario.Size = new System.Drawing.Size(800, 385);
+            this.flpMotosUsuario.TabIndex = 0;
             // 
             // CatalogoCliente
             // 
@@ -242,10 +139,6 @@
             this.panelCatalogoMotos.ResumeLayout(false);
             this.panelCatalogoMotos.PerformLayout();
             this.panelContenedorCatalogo.ResumeLayout(false);
-            this.panelContenedorCatalogo.PerformLayout();
-            this.tsCatalogo.ResumeLayout(false);
-            this.tsCatalogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvContenedorCatalogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,20 +150,8 @@
         private System.Windows.Forms.Panel panelCatalogoMotos;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelContenedorCatalogo;
-        private System.Windows.Forms.ToolStrip tsCatalogo;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.DataGridView dtgvContenedorCatalogo;
+        private System.Windows.Forms.Button btnFiltrar;
+        private System.Windows.Forms.TextBox txtFiltroMotos;
+        private System.Windows.Forms.FlowLayoutPanel flpMotosUsuario;
     }
 }

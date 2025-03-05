@@ -63,6 +63,46 @@ namespace ConsecionarioTecs.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap busqueda {
+            get {
+                object obj = ResourceManager.GetObject("busqueda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap busqueda__1_ {
+            get {
+                object obj = ResourceManager.GetObject("busqueda (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap busqueda__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("busqueda (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cabeza {
+            get {
+                object obj = ResourceManager.GetObject("cabeza", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_pantalla_2025_02_18_031942_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Captura_de_pantalla_2025-02-18_031942-removebg-preview", resourceCulture);
@@ -186,6 +226,16 @@ namespace ConsecionarioTecs.Properties {
         internal static System.Drawing.Bitmap Mobile_Menu_Icon {
             get {
                 object obj = ResourceManager.GetObject("Mobile-Menu-Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MotoEjemplo {
+            get {
+                object obj = ResourceManager.GetObject("MotoEjemplo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarAdmin));
             this.panelAggAdmin = new System.Windows.Forms.Panel();
             this.btnCerrarA = new System.Windows.Forms.Button();
             this.lblAggAdmin = new System.Windows.Forms.Label();
@@ -220,7 +221,7 @@
             this.txtCiudad.BackColor = System.Drawing.SystemColors.GrayText;
             this.txtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCiudad.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCiudad.Location = new System.Drawing.Point(105, 146);
+            this.txtCiudad.Location = new System.Drawing.Point(103, 142);
             this.txtCiudad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCiudad.MaxLength = 20;
             this.txtCiudad.Name = "txtCiudad";
@@ -376,7 +377,7 @@
             this.txtContraseñaAdmin.BackColor = System.Drawing.SystemColors.GrayText;
             this.txtContraseñaAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseñaAdmin.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaAdmin.Location = new System.Drawing.Point(436, 282);
+            this.txtContraseñaAdmin.Location = new System.Drawing.Point(436, 291);
             this.txtContraseñaAdmin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtContraseñaAdmin.MaxLength = 50;
             this.txtContraseñaAdmin.Name = "txtContraseñaAdmin";
@@ -554,7 +555,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.SystemColors.GrayText;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(102, 254);
+            this.label16.Location = new System.Drawing.Point(102, 258);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(175, 13);
             this.label16.TabIndex = 85;
@@ -678,6 +679,7 @@
             this.Controls.Add(this.dtgvContenedorAggAdmin);
             this.Controls.Add(this.panelAggAdmin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AgregarAdmin";
             this.Text = "AgregarAdmin";
             this.panelAggAdmin.ResumeLayout(false);

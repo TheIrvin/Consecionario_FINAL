@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaCliente));
             this.PanelContenedorCliente = new System.Windows.Forms.Panel();
             this.panelMenuCliente = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -317,6 +318,7 @@
             this.Controls.Add(this.btnRestaurar);
             this.Controls.Add(this.btnMinimizar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VistaCliente";
             this.Text = "VistaCliente";
             this.panelMenuCliente.ResumeLayout(false);

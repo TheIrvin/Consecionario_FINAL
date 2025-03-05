@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNc));
             this.panelModificarC = new System.Windows.Forms.Panel();
             this.lblID = new System.Windows.Forms.Label();
             this.lblModificarCliente = new System.Windows.Forms.Label();
@@ -801,6 +802,7 @@
             this.Controls.Add(this.panelModificarC);
             this.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNc";
             this.Text = "Agregar Nuevo Cliente";

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAdmin));
             this.panelCabecera = new System.Windows.Forms.Panel();
             this.btnRestaurar = new System.Windows.Forms.Button();
             this.btnMinimizarM = new System.Windows.Forms.Button();
@@ -399,6 +400,7 @@
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelCabecera);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuAdmin";
             this.Text = "Form1";
             this.panelCabecera.ResumeLayout(false);

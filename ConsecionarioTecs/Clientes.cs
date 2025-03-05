@@ -118,16 +118,16 @@ namespace FormularioDeInicio
 
             fuente = new Font("Arial", 12, FontStyle.Regular);
             Conexion_BDD sqlCon = new Conexion_BDD();
-            string cadena = "SELECT [Cliente ID], [Nombre Cliente], [Empresa Cliente], [Titulo Cliente], [Dirección], [Ciudad], [Región], [País], [Teléfono] FROM Clientes";
+            string cadena = "SELECT [ClienteID], [NombreCliente], [EmpresaCliente], [TituloCliente], [Dirección], [Ciudad], [Región], [País], [Teléfono] FROM Clientes";
             DataTable dt = sqlCon.retornaRegistros(cadena);
 
             for (int i = 0; Bandera < dt.Rows.Count && i < ClientexPag; i++, Bandera++)
             {
                 e.Graphics.DrawString((Bandera + 1).ToString(), fuente, Brushes.Black, new RectangleF(0, y, 40, 20));
-                e.Graphics.DrawString(dt.Rows[Bandera]["Cliente ID"].ToString().Trim(), fuente, Brushes.Black, new RectangleF(41, y, 50, 20));
-                e.Graphics.DrawString(dt.Rows[Bandera]["Nombre Cliente"].ToString().Trim(), fuente, Brushes.Black, new RectangleF(92, y, 150, 20));
-                e.Graphics.DrawString(dt.Rows[Bandera]["Empresa Cliente"].ToString().Trim(), fuente, Brushes.Black, new RectangleF(243, y, 150, 20));
-                e.Graphics.DrawString(dt.Rows[Bandera]["Titulo Cliente"].ToString().Trim(), fuente, Brushes.Black, new RectangleF(394, y, 120, 20));
+                e.Graphics.DrawString(dt.Rows[Bandera]["ClienteID"].ToString().Trim(), fuente, Brushes.Black, new RectangleF(41, y, 50, 20));
+                e.Graphics.DrawString(dt.Rows[Bandera]["NombreCliente"].ToString().Trim(), fuente, Brushes.Black, new RectangleF(92, y, 150, 20));
+                e.Graphics.DrawString(dt.Rows[Bandera]["EmpresaCliente"].ToString().Trim(), fuente, Brushes.Black, new RectangleF(243, y, 150, 20));
+                e.Graphics.DrawString(dt.Rows[Bandera]["TituloCliente"].ToString().Trim(), fuente, Brushes.Black, new RectangleF(394, y, 120, 20));
                 e.Graphics.DrawString(dt.Rows[Bandera]["Dirección"].ToString().Trim(), fuente, Brushes.Black, new RectangleF(515, y, 150, 20));
                 e.Graphics.DrawString(dt.Rows[Bandera]["Ciudad"].ToString().Trim(), fuente, Brushes.Black, new RectangleF(666, y, 100, 20));
                 e.Graphics.DrawString(dt.Rows[Bandera]["Región"].ToString().Trim(), fuente, Brushes.Black, new RectangleF(767, y, 100, 20));

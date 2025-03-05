@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarMoto));
             this.panelTopaggMoto = new System.Windows.Forms.Panel();
             this.btnCerrarAggC = new System.Windows.Forms.Button();
             this.lblAggMoto = new System.Windows.Forms.Label();
@@ -384,6 +385,7 @@
             this.Controls.Add(this.panelCentroMotos);
             this.Controls.Add(this.panelTopaggMoto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AgregarMoto";
             this.Text = "AgregarMoto";
             this.panelTopaggMoto.ResumeLayout(false);

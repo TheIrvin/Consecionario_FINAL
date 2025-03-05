@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ptLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.lblLogin = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCerrarLogin = new System.Windows.Forms.Button();
-            this.ptLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptLogo)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +66,6 @@
             this.ptLogo.TabIndex = 0;
             this.ptLogo.TabStop = false;
             // 
-
             // label1
             // 
             this.label1.AutoSize = true;
@@ -186,17 +185,6 @@
             this.btnCerrarLogin.UseVisualStyleBackColor = true;
             this.btnCerrarLogin.Click += new System.EventHandler(this.btnCerrarLogin_Click);
             // 
-            // ptLogo
-            // 
-            this.ptLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            this.ptLogo.Image = ((System.Drawing.Image)(resources.GetObject("ptLogo.Image")));
-            this.ptLogo.Location = new System.Drawing.Point(0, 41);
-            this.ptLogo.Name = "ptLogo";
-            this.ptLogo.Size = new System.Drawing.Size(253, 247);
-            this.ptLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptLogo.TabIndex = 0;
-            this.ptLogo.TabStop = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,6 +202,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

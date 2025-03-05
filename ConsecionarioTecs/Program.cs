@@ -17,7 +17,7 @@ namespace ConsecionarioTecs
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VistaCliente());
+            Application.Run(new Login());
         }
     }
 }

@@ -58,7 +58,7 @@
             // 
             this.lblAdministradores.AutoSize = true;
             this.lblAdministradores.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdministradores.Location = new System.Drawing.Point(8, 0);
+            this.lblAdministradores.Location = new System.Drawing.Point(3, 6);
             this.lblAdministradores.Name = "lblAdministradores";
             this.lblAdministradores.Size = new System.Drawing.Size(238, 26);
             this.lblAdministradores.TabIndex = 2;

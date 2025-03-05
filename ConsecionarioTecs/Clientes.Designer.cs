@@ -29,67 +29,37 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
-            this.lblClientes = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblxClientes = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsClientes = new System.Windows.Forms.ToolStrip();
             this.ttlbFiltrar = new System.Windows.Forms.ToolStripLabel();
-            this.tstxtFiltrar = new System.Windows.Forms.ToolStripTextBox();
+            this.tstxtFiltrarCliente = new System.Windows.Forms.ToolStripTextBox();
+            this.tsbtnFiltrarCliente = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.dtgvContendorClientes = new System.Windows.Forms.DataGridView();
-            this.panelContenedorClientes = new System.Windows.Forms.Panel();
-            this.tsbtnFiltrar = new System.Windows.Forms.ToolStripButton();
             this.tsbtnAgregarCliente = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsBtnModificarCliente = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnImprimir = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvContendorClientes)).BeginInit();
-            this.panelContenedorClientes.SuspendLayout();
+            this.panelClientes = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblClientes = new System.Windows.Forms.Label();
+            this.dtgvContenedorClientes = new System.Windows.Forms.DataGridView();
+            this.panelContenedorCliente = new System.Windows.Forms.Panel();
+            this.tsClientes.SuspendLayout();
+            this.panelClientes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvContenedorClientes)).BeginInit();
+            this.panelContenedorCliente.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblClientes
+            // tsClientes
             // 
-            this.lblClientes.AutoSize = true;
-            this.lblClientes.BackColor = System.Drawing.Color.Transparent;
-            this.lblClientes.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientes.Location = new System.Drawing.Point(8, 0);
-            this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(124, 26);
-            this.lblClientes.TabIndex = 2;
-            this.lblClientes.Text = "CLIENTES";
-            this.lblClientes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 26);
-            this.panel1.TabIndex = 4;
-            // 
-            // lblxClientes
-            // 
-            this.lblxClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblxClientes.AutoSize = true;
-            this.lblxClientes.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblxClientes.Location = new System.Drawing.Point(770, 0);
-            this.lblxClientes.Name = "lblxClientes";
-            this.lblxClientes.Size = new System.Drawing.Size(27, 26);
-            this.lblxClientes.TabIndex = 3;
-            this.lblxClientes.Text = "X";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsClientes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ttlbFiltrar,
-            this.tstxtFiltrar,
-            this.tsbtnFiltrar,
+            this.tstxtFiltrarCliente,
+            this.tsbtnFiltrarCliente,
             this.toolStripSeparator1,
             this.toolStripLabel1,
             this.toolStripSeparator2,
@@ -100,11 +70,11 @@
             this.tsbtnEliminar,
             this.toolStripSeparator5,
             this.tsbtnImprimir});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.tsClientes.Location = new System.Drawing.Point(0, 0);
+            this.tsClientes.Name = "tsClientes";
+            this.tsClientes.Size = new System.Drawing.Size(800, 25);
+            this.tsClientes.TabIndex = 0;
+            this.tsClientes.Text = "toolStrip1";
             // 
             // ttlbFiltrar
             // 
@@ -112,11 +82,22 @@
             this.ttlbFiltrar.Size = new System.Drawing.Size(40, 22);
             this.ttlbFiltrar.Text = "Filtrar:";
             // 
-            // tstxtFiltrar
+            // tstxtFiltrarCliente
             // 
-            this.tstxtFiltrar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tstxtFiltrar.Name = "tstxtFiltrar";
-            this.tstxtFiltrar.Size = new System.Drawing.Size(110, 25);
+            this.tstxtFiltrarCliente.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tstxtFiltrarCliente.Name = "tstxtFiltrarCliente";
+            this.tstxtFiltrarCliente.Size = new System.Drawing.Size(110, 25);
+            this.tstxtFiltrarCliente.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tstxtFiltrarCliente_KeyUp);
+            // 
+            // tsbtnFiltrarCliente
+            // 
+            this.tsbtnFiltrarCliente.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnFiltrarCliente.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnFiltrarCliente.Image")));
+            this.tsbtnFiltrarCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnFiltrarCliente.Name = "tsbtnFiltrarCliente";
+            this.tsbtnFiltrarCliente.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnFiltrarCliente.Text = "Buscar";
+            this.tsbtnFiltrarCliente.Click += new System.EventHandler(this.tsbtnFiltrarCliente_Click);
             // 
             // toolStripSeparator1
             // 
@@ -134,51 +115,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
-            // 
-            // dtgvContendorClientes
-            // 
-            this.dtgvContendorClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvContendorClientes.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtgvContendorClientes.Location = new System.Drawing.Point(0, 28);
-            this.dtgvContendorClientes.Name = "dtgvContendorClientes";
-            this.dtgvContendorClientes.Size = new System.Drawing.Size(800, 390);
-            this.dtgvContendorClientes.TabIndex = 1;
-            this.dtgvContendorClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvContendorClientes_CellContentClick);
-            // 
-            // panelContenedorClientes
-            // 
-            this.panelContenedorClientes.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panelContenedorClientes.Controls.Add(this.dtgvContendorClientes);
-            this.panelContenedorClientes.Controls.Add(this.toolStrip1);
-            this.panelContenedorClientes.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelContenedorClientes.Location = new System.Drawing.Point(0, 32);
-            this.panelContenedorClientes.Name = "panelContenedorClientes";
-            this.panelContenedorClientes.Size = new System.Drawing.Size(800, 418);
-            this.panelContenedorClientes.TabIndex = 5;
-            // 
-            // tsbtnFiltrar
-            // 
-            this.tsbtnFiltrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnFiltrar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnFiltrar.Image")));
-            this.tsbtnFiltrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnFiltrar.Name = "tsbtnFiltrar";
-            this.tsbtnFiltrar.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnFiltrar.Text = "toolStripButton1";
-            // 
             // tsbtnAgregarCliente
             // 
             this.tsbtnAgregarCliente.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAgregarCliente.Image")));
@@ -188,6 +124,12 @@
             this.tsbtnAgregarCliente.Text = "Agregar";
             this.tsbtnAgregarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tsbtnAgregarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbtnAgregarCliente.Click += new System.EventHandler(this.tsbtnAgregarCliente_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // tsBtnModificarCliente
             // 
@@ -197,6 +139,12 @@
             this.tsBtnModificarCliente.Size = new System.Drawing.Size(78, 22);
             this.tsBtnModificarCliente.Text = "Modificar";
             this.tsBtnModificarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsBtnModificarCliente.Click += new System.EventHandler(this.tsBtnModificarCliente_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // tsbtnEliminar
             // 
@@ -206,6 +154,12 @@
             this.tsbtnEliminar.Size = new System.Drawing.Size(70, 22);
             this.tsbtnEliminar.Text = "Eliminar";
             this.tsbtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbtnEliminar.Click += new System.EventHandler(this.tsbtnEliminar_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
             // tsbtnImprimir
             // 
@@ -216,38 +170,84 @@
             this.tsbtnImprimir.Text = "Imprimir";
             this.tsbtnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
+            // panelClientes
+            // 
+            this.panelClientes.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelClientes.Controls.Add(this.panel2);
+            this.panelClientes.Controls.Add(this.lblClientes);
+            this.panelClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelClientes.Location = new System.Drawing.Point(0, 0);
+            this.panelClientes.Name = "panelClientes";
+            this.panelClientes.Size = new System.Drawing.Size(800, 35);
+            this.panelClientes.TabIndex = 6;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(5, 26);
+            this.panel2.TabIndex = 6;
+            // 
+            // lblClientes
+            // 
+            this.lblClientes.AutoSize = true;
+            this.lblClientes.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientes.Location = new System.Drawing.Point(3, 6);
+            this.lblClientes.Name = "lblClientes";
+            this.lblClientes.Size = new System.Drawing.Size(124, 26);
+            this.lblClientes.TabIndex = 2;
+            this.lblClientes.Text = "CLIENTES";
+            this.lblClientes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // dtgvContenedorClientes
+            // 
+            this.dtgvContenedorClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvContenedorClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvContenedorClientes.Location = new System.Drawing.Point(0, 25);
+            this.dtgvContenedorClientes.Name = "dtgvContenedorClientes";
+            this.dtgvContenedorClientes.Size = new System.Drawing.Size(800, 390);
+            this.dtgvContenedorClientes.TabIndex = 1;
+            // 
+            // panelContenedorCliente
+            // 
+            this.panelContenedorCliente.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panelContenedorCliente.Controls.Add(this.dtgvContenedorClientes);
+            this.panelContenedorCliente.Controls.Add(this.tsClientes);
+            this.panelContenedorCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedorCliente.Location = new System.Drawing.Point(0, 35);
+            this.panelContenedorCliente.Name = "panelContenedorCliente";
+            this.panelContenedorCliente.Size = new System.Drawing.Size(800, 415);
+            this.panelContenedorCliente.TabIndex = 10;
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelContenedorClientes);
-            this.Controls.Add(this.lblxClientes);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblClientes);
+            this.Controls.Add(this.panelContenedorCliente);
+            this.Controls.Add(this.panelClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Clientes";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Clientes_Load);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvContendorClientes)).EndInit();
-            this.panelContenedorClientes.ResumeLayout(false);
-            this.panelContenedorClientes.PerformLayout();
+            this.tsClientes.ResumeLayout(false);
+            this.tsClientes.PerformLayout();
+            this.panelClientes.ResumeLayout(false);
+            this.panelClientes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvContenedorClientes)).EndInit();
+            this.panelContenedorCliente.ResumeLayout(false);
+            this.panelContenedorCliente.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblClientes;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblxClientes;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip tsClientes;
         private System.Windows.Forms.ToolStripLabel ttlbFiltrar;
-        private System.Windows.Forms.ToolStripTextBox tstxtFiltrar;
-        private System.Windows.Forms.ToolStripButton tsbtnFiltrar;
+        private System.Windows.Forms.ToolStripTextBox tstxtFiltrarCliente;
+        private System.Windows.Forms.ToolStripButton tsbtnFiltrarCliente;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
@@ -258,7 +258,10 @@
         private System.Windows.Forms.ToolStripButton tsbtnEliminar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton tsbtnImprimir;
-        private System.Windows.Forms.Panel panelContenedorClientes;
-        public System.Windows.Forms.DataGridView dtgvContendorClientes;
+        private System.Windows.Forms.Panel panelClientes;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblClientes;
+        public System.Windows.Forms.DataGridView dtgvContenedorClientes;
+        private System.Windows.Forms.Panel panelContenedorCliente;
     }
 }

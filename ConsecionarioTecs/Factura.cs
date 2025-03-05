@@ -8,21 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FormularioDeInicio
+namespace ConsecionarioTecs
 {
-    public partial class ComprasClientes : Form
+    public partial class Factura: Form
     {
-        public ComprasClientes()
+        public Factura()
         {
             InitializeComponent();
         }
 
-        private void lblxComprasClientes_Click(object sender, EventArgs e)
+        private void label16_Click(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void lblComprasClientes_Click(object sender, EventArgs e)
+        private void label24_Click(object sender, EventArgs e)
         {
 
         }

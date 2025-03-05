@@ -38,16 +38,16 @@
             this.tsAdministradores = new System.Windows.Forms.ToolStrip();
             this.ttlbFiltrarAdmin = new System.Windows.Forms.ToolStripLabel();
             this.tstxtFiltrarAdmin = new System.Windows.Forms.ToolStripTextBox();
+            this.tsbtnFiltrarAdmin = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbtnFiltrarAdmin = new System.Windows.Forms.ToolStripButton();
             this.tsbtnAgregarAdmin = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsBtnModificarAdmin = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnEliminarAdmin = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnImprimirAdmin = new System.Windows.Forms.ToolStripButton();
             this.panelAdmin.SuspendLayout();
             this.panelContenedorAdministradores.SuspendLayout();
@@ -60,9 +60,10 @@
             this.lblxAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblxAdmin.AutoSize = true;
             this.lblxAdmin.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblxAdmin.Location = new System.Drawing.Point(770, 0);
+            this.lblxAdmin.Location = new System.Drawing.Point(1027, 0);
+            this.lblxAdmin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblxAdmin.Name = "lblxAdmin";
-            this.lblxAdmin.Size = new System.Drawing.Size(27, 26);
+            this.lblxAdmin.Size = new System.Drawing.Size(35, 34);
             this.lblxAdmin.TabIndex = 3;
             this.lblxAdmin.Text = "X";
             // 
@@ -70,9 +71,10 @@
             // 
             this.lblAdministradores.AutoSize = true;
             this.lblAdministradores.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdministradores.Location = new System.Drawing.Point(8, 0);
+            this.lblAdministradores.Location = new System.Drawing.Point(11, 0);
+            this.lblAdministradores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdministradores.Name = "lblAdministradores";
-            this.lblAdministradores.Size = new System.Drawing.Size(238, 26);
+            this.lblAdministradores.Size = new System.Drawing.Size(302, 34);
             this.lblAdministradores.TabIndex = 2;
             this.lblAdministradores.Text = "ADMINISTRADORES";
             this.lblAdministradores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -85,16 +87,18 @@
             this.panelAdmin.Controls.Add(this.lblxAdmin);
             this.panelAdmin.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAdmin.Location = new System.Drawing.Point(0, 0);
+            this.panelAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelAdmin.Name = "panelAdmin";
-            this.panelAdmin.Size = new System.Drawing.Size(800, 35);
+            this.panelAdmin.Size = new System.Drawing.Size(1067, 43);
             this.panelAdmin.TabIndex = 4;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 26);
+            this.panel2.Size = new System.Drawing.Size(7, 32);
             this.panel2.TabIndex = 6;
             // 
             // panelContenedorAdministradores
@@ -103,22 +107,26 @@
             this.panelContenedorAdministradores.Controls.Add(this.dtgvContenedorAdministradores);
             this.panelContenedorAdministradores.Controls.Add(this.tsAdministradores);
             this.panelContenedorAdministradores.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedorAdministradores.Location = new System.Drawing.Point(0, 35);
+            this.panelContenedorAdministradores.Location = new System.Drawing.Point(0, 43);
+            this.panelContenedorAdministradores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelContenedorAdministradores.Name = "panelContenedorAdministradores";
-            this.panelContenedorAdministradores.Size = new System.Drawing.Size(800, 415);
+            this.panelContenedorAdministradores.Size = new System.Drawing.Size(1067, 511);
             this.panelContenedorAdministradores.TabIndex = 9;
             // 
             // dtgvContenedorAdministradores
             // 
             this.dtgvContenedorAdministradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvContenedorAdministradores.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvContenedorAdministradores.Location = new System.Drawing.Point(0, 25);
+            this.dtgvContenedorAdministradores.Location = new System.Drawing.Point(0, 31);
+            this.dtgvContenedorAdministradores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgvContenedorAdministradores.Name = "dtgvContenedorAdministradores";
-            this.dtgvContenedorAdministradores.Size = new System.Drawing.Size(800, 390);
+            this.dtgvContenedorAdministradores.RowHeadersWidth = 51;
+            this.dtgvContenedorAdministradores.Size = new System.Drawing.Size(1067, 480);
             this.dtgvContenedorAdministradores.TabIndex = 10;
             // 
             // tsAdministradores
             // 
+            this.tsAdministradores.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.tsAdministradores.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ttlbFiltrarAdmin,
             this.tstxtFiltrarAdmin,
@@ -135,53 +143,22 @@
             this.tsbtnImprimirAdmin});
             this.tsAdministradores.Location = new System.Drawing.Point(0, 0);
             this.tsAdministradores.Name = "tsAdministradores";
-            this.tsAdministradores.Size = new System.Drawing.Size(800, 25);
+            this.tsAdministradores.Size = new System.Drawing.Size(1067, 31);
             this.tsAdministradores.TabIndex = 9;
             this.tsAdministradores.Text = "toolStrip1";
             // 
             // ttlbFiltrarAdmin
             // 
             this.ttlbFiltrarAdmin.Name = "ttlbFiltrarAdmin";
-            this.ttlbFiltrarAdmin.Size = new System.Drawing.Size(40, 22);
+            this.ttlbFiltrarAdmin.Size = new System.Drawing.Size(50, 28);
             this.ttlbFiltrarAdmin.Text = "Filtrar:";
             // 
             // tstxtFiltrarAdmin
             // 
             this.tstxtFiltrarAdmin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tstxtFiltrarAdmin.Name = "tstxtFiltrarAdmin";
-            this.tstxtFiltrarAdmin.Size = new System.Drawing.Size(110, 25);
+            this.tstxtFiltrarAdmin.Size = new System.Drawing.Size(145, 31);
             this.tstxtFiltrarAdmin.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tstxtFiltrarAdmin_KeyUp);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(58, 22);
-            this.toolStripLabel1.Text = "Acciones:";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
             // tsbtnFiltrarAdmin
             // 
@@ -189,59 +166,91 @@
             this.tsbtnFiltrarAdmin.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnFiltrarAdmin.Image")));
             this.tsbtnFiltrarAdmin.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnFiltrarAdmin.Name = "tsbtnFiltrarAdmin";
-            this.tsbtnFiltrarAdmin.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnFiltrarAdmin.Size = new System.Drawing.Size(29, 28);
             this.tsbtnFiltrarAdmin.Text = "toolStripButton1";
             this.tsbtnFiltrarAdmin.Click += new System.EventHandler(this.tsbtnFiltrarAdmin_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(71, 28);
+            this.toolStripLabel1.Text = "Acciones:";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // tsbtnAgregarAdmin
             // 
             this.tsbtnAgregarAdmin.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAgregarAdmin.Image")));
             this.tsbtnAgregarAdmin.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnAgregarAdmin.Name = "tsbtnAgregarAdmin";
-            this.tsbtnAgregarAdmin.Size = new System.Drawing.Size(69, 22);
+            this.tsbtnAgregarAdmin.Size = new System.Drawing.Size(87, 28);
             this.tsbtnAgregarAdmin.Text = "Agregar";
             this.tsbtnAgregarAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tsbtnAgregarAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.tsbtnAgregarAdmin.Click += new System.EventHandler(this.tsbtnAgregarAdmin_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
             // 
             // tsBtnModificarAdmin
             // 
             this.tsBtnModificarAdmin.Image = ((System.Drawing.Image)(resources.GetObject("tsBtnModificarAdmin.Image")));
             this.tsBtnModificarAdmin.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBtnModificarAdmin.Name = "tsBtnModificarAdmin";
-            this.tsBtnModificarAdmin.Size = new System.Drawing.Size(78, 22);
+            this.tsBtnModificarAdmin.Size = new System.Drawing.Size(97, 28);
             this.tsBtnModificarAdmin.Text = "Modificar";
             this.tsBtnModificarAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.tsBtnModificarAdmin.Click += new System.EventHandler(this.tsBtnModificarAdmin_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
             // 
             // tsbtnEliminarAdmin
             // 
             this.tsbtnEliminarAdmin.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnEliminarAdmin.Image")));
             this.tsbtnEliminarAdmin.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnEliminarAdmin.Name = "tsbtnEliminarAdmin";
-            this.tsbtnEliminarAdmin.Size = new System.Drawing.Size(70, 22);
+            this.tsbtnEliminarAdmin.Size = new System.Drawing.Size(87, 28);
             this.tsbtnEliminarAdmin.Text = "Eliminar";
             this.tsbtnEliminarAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.tsbtnEliminarAdmin.Click += new System.EventHandler(this.tsbtnEliminarAdmin_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
             // 
             // tsbtnImprimirAdmin
             // 
             this.tsbtnImprimirAdmin.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnImprimirAdmin.Image")));
             this.tsbtnImprimirAdmin.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnImprimirAdmin.Name = "tsbtnImprimirAdmin";
-            this.tsbtnImprimirAdmin.Size = new System.Drawing.Size(73, 22);
+            this.tsbtnImprimirAdmin.Size = new System.Drawing.Size(90, 28);
             this.tsbtnImprimirAdmin.Text = "Imprimir";
             this.tsbtnImprimirAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // Administradores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panelContenedorAdministradores);
             this.Controls.Add(this.panelAdmin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Administradores";
             this.Text = "Administradores";
             this.Load += new System.EventHandler(this.Administradores_Load);

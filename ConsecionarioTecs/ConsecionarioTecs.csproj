@@ -95,6 +95,12 @@
     <Compile Include="Estadisticas.Designer.cs">
       <DependentUpon>Estadisticas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Estadisticas.resx">
       <DependentUpon>Estadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

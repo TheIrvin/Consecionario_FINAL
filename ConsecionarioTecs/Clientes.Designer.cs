@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.tsClientes = new System.Windows.Forms.ToolStrip();
             this.ttlbFiltrar = new System.Windows.Forms.ToolStripLabel();
@@ -48,6 +49,8 @@
             this.lblClientes = new System.Windows.Forms.Label();
             this.dtgvContenedorClientes = new System.Windows.Forms.DataGridView();
             this.panelContenedorCliente = new System.Windows.Forms.Panel();
+            this.imlImagenes = new System.Windows.Forms.ImageList(this.components);
+            this.pdrImprimir = new System.Drawing.Printing.PrintDocument();
             this.tsClientes.SuspendLayout();
             this.panelClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvContenedorClientes)).BeginInit();
@@ -169,6 +172,7 @@
             this.tsbtnImprimir.Size = new System.Drawing.Size(73, 22);
             this.tsbtnImprimir.Text = "Imprimir";
             this.tsbtnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbtnImprimir.Click += new System.EventHandler(this.tsbtnImprimir_Click);
             // 
             // panelClientes
             // 
@@ -220,6 +224,12 @@
             this.panelContenedorCliente.Size = new System.Drawing.Size(800, 415);
             this.panelContenedorCliente.TabIndex = 10;
             // 
+            // imlImagenes
+            // 
+            this.imlImagenes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imlImagenes.ImageStream")));
+            this.imlImagenes.TransparentColor = System.Drawing.Color.Transparent;
+            this.imlImagenes.Images.SetKeyName(0, "Logo_TECS.jpg");
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,5 +273,7 @@
         private System.Windows.Forms.Label lblClientes;
         public System.Windows.Forms.DataGridView dtgvContenedorClientes;
         private System.Windows.Forms.Panel panelContenedorCliente;
+        private System.Windows.Forms.ImageList imlImagenes;
+        private System.Drawing.Printing.PrintDocument pdrImprimir;
     }
 }

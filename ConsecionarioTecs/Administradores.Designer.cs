@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administradores));
             this.lblAdministradores = new System.Windows.Forms.Label();
             this.panelAdmin = new System.Windows.Forms.Panel();
@@ -48,6 +49,8 @@
             this.tsbtnEliminarAdmin = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnImprimirAdmin = new System.Windows.Forms.ToolStripButton();
+            this.pdrImprimir = new System.Drawing.Printing.PrintDocument();
+            this.imlImagenes = new System.Windows.Forms.ImageList(this.components);
             this.panelAdmin.SuspendLayout();
             this.panelContenedorAdministradores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvContenedorAdministradores)).BeginInit();
@@ -219,6 +222,13 @@
             this.tsbtnImprimirAdmin.Size = new System.Drawing.Size(73, 22);
             this.tsbtnImprimirAdmin.Text = "Imprimir";
             this.tsbtnImprimirAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbtnImprimirAdmin.Click += new System.EventHandler(this.tsbtnImprimirAdmin_Click);
+            // 
+            // imlImagenes
+            // 
+            this.imlImagenes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imlImagenes.ImageStream")));
+            this.imlImagenes.TransparentColor = System.Drawing.Color.Transparent;
+            this.imlImagenes.Images.SetKeyName(0, "Logo_TECS.jpg");
             // 
             // Administradores
             // 
@@ -263,5 +273,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton tsbtnImprimirAdmin;
         public System.Windows.Forms.DataGridView dtgvContenedorAdministradores;
+        private System.Drawing.Printing.PrintDocument pdrImprimir;
+        private System.Windows.Forms.ImageList imlImagenes;
     }
 }

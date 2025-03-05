@@ -196,7 +196,6 @@
             this.ptLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptLogo.TabIndex = 0;
             this.ptLogo.TabStop = false;
-            this.ptLogo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Login
             // 

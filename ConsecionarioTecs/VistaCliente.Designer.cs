@@ -133,7 +133,7 @@
             this.btnComprasCliente.Name = "btnComprasCliente";
             this.btnComprasCliente.Size = new System.Drawing.Size(220, 50);
             this.btnComprasCliente.TabIndex = 6;
-            this.btnComprasCliente.Text = "    Compras";
+            this.btnComprasCliente.Text = "    Vender";
             this.btnComprasCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnComprasCliente.UseVisualStyleBackColor = true;
             this.btnComprasCliente.Click += new System.EventHandler(this.btnComprasCliente_Click);

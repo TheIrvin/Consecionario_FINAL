@@ -52,7 +52,6 @@ namespace FormularioDeInicio
             e.Graphics.DrawString("Listado de Clientes", fuente, Brushes.Red, new RectangleF(300, 70, 300, 35));
             fuente = new Font("Arial", 12, FontStyle.Bold);
 
-            // Encabezados de la tabla
             e.Graphics.DrawString("Num.", fuente, Brushes.Black, new RectangleF(0, 140, 40, 20));
             e.Graphics.DrawString("ID", fuente, Brushes.Black, new RectangleF(41, 140, 50, 20));
             e.Graphics.DrawString("Nombre", fuente, Brushes.Black, new RectangleF(92, 140, 150, 20));
@@ -64,7 +63,7 @@ namespace FormularioDeInicio
 
             fuente = new Font("Arial", 12, FontStyle.Regular);
             Conexion_BDD sqlCon = new Conexion_BDD();
-            string cadena = "SELECT [Cliente Id], [Nombre Cliente], [Empresa Cliente], [Titulo Cliente], [Dirección], [Ciudad], [Región], [País], [Teléfono] FROM Clientes";
+            string cadena = "SELECT [Cliente ID], [Nombre Cliente], [Empresa Cliente], [Titulo Cliente], [Dirección], [Ciudad], [Región], [País], [Teléfono] FROM Clientes";
             DataTable dt = sqlCon.retornaRegistros(cadena);
 
             for (int i = 0; Bandera < dt.Rows.Count && i < ClientexPag; i++, Bandera++)

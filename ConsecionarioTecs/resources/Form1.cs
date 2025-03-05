@@ -111,7 +111,7 @@ namespace FormularioDeInicio
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AbrirEnPanel(new Compras());
+            AbrirEnPanel(new Venta_Cliente());
         }
 
         private void button3_Click(object sender, EventArgs e)

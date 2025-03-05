@@ -96,7 +96,7 @@ namespace FormularioDeInicio
 
         private void btnComprasCliente_Click(object sender, EventArgs e)
         {
-            AbrirEnPanelCliente(new ComprasClientes());
+            AbrirEnPanelCliente(new Venta_Cliente());
         }
 
         private void btnSoporteCliente_Click(object sender, EventArgs e)

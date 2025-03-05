@@ -70,11 +70,11 @@
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Compras.cs">
+    <Compile Include="Venta_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Compras.Designer.cs">
-      <DependentUpon>Compras.cs</DependentUpon>
+    <Compile Include="Venta_Cliente.Designer.cs">
+      <DependentUpon>Venta_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="ComprasClientes.cs">
       <SubType>Form</SubType>
@@ -157,8 +157,8 @@
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Compras.resx">
-      <DependentUpon>Compras.cs</DependentUpon>
+    <EmbeddedResource Include="Venta_Cliente.resx">
+      <DependentUpon>Venta_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ComprasClientes.resx">
       <DependentUpon>ComprasClientes.cs</DependentUpon>

@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using FormularioDeInicio;
+using System.Data.SqlClient;
 
 namespace ConsecionarioTecs
 {
     public partial class Login : Form
     {
+        string connectionString = "Server=DESKTOP-9SMDLH8\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=AccesoChari;Password=accesochari;";
         public Login()
         {
             InitializeComponent();
@@ -22,36 +24,6 @@ namespace ConsecionarioTecs
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsuario_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
@@ -91,20 +63,10 @@ namespace ConsecionarioTecs
             }
         }
 
-        private void ptbMinimizar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -115,30 +77,84 @@ namespace ConsecionarioTecs
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsuario.Text;
-            string contraseña = txtContraseña.Text;
+            string usuario = txtUsuario.Text.Trim();
+            string contrasena = txtContraseña.Text.Trim();
 
-            if (usuario == "admin" && contraseña == "1234")
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                MessageBox.Show("Acceso concedido","Exito", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                MenuAdmin adminForm = new MenuAdmin();
-                adminForm.Show();
-                this.Hide();
-            }
-            else if (usuario=="cliente" && contraseña == "5678")
-            {
-                MessageBox.Show("Bienvenido a Tecs", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                VistaCliente ClienteForm = new VistaCliente();
-                ClienteForm.Show();
-                this.Hide();
-            }
+                string queryAdmin = "SELECT * FROM Administradores WHERE UsuarioAdmin = @usuario AND ContraseñaAdmin = @contrasena";
+                string queryCliente = "SELECT * FROM Clientes WHERE LoginUsuario = @usuario AND LoginContraseña = @contrasena";
 
-            else
-            {
-                MessageBox.Show("Usuario o Contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                SqlCommand cmdAdmin = new SqlCommand(queryAdmin, conn);
+                SqlCommand cmdCliente = new SqlCommand(queryCliente, conn);
 
+                cmdAdmin.Parameters.AddWithValue("@usuario", usuario);
+                cmdAdmin.Parameters.AddWithValue("@contrasena", contrasena);
+
+                cmdCliente.Parameters.AddWithValue("@usuario", usuario);
+                cmdCliente.Parameters.AddWithValue("@contrasena", contrasena);
+
+                try
+                {
+                    conn.Open();
+
+                    SqlDataReader readerAdmin = cmdAdmin.ExecuteReader();
+
+                    if (readerAdmin.Read())
+                    {
+                        MessageBox.Show("¡Bienvenido Administrador!");
+                        this.Hide();
+                        MenuAdmin adminForm = new MenuAdmin();
+                        adminForm.Show();
+                        return;
+                    }
+
+                    readerAdmin.Close();
+
+                    SqlDataReader readerCliente = cmdCliente.ExecuteReader();
+
+                    if (readerCliente.Read())
+                    {
+                        MessageBox.Show("¡Bienvenido Cliente!");
+                        this.Hide();
+                        VistaCliente clienteForm = new VistaCliente();
+                        clienteForm.Show();
+                        return;
+                    }
+
+                    readerCliente.Close();
+
+                    MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en la conexión: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
+
+            //string usuario = txtUsuario.Text;
+            //string contraseña = txtContraseña.Text;
+
+            //if (usuario == "admin" && contraseña == "1234")
+            //{
+            //    MessageBox.Show("Acceso concedido","Exito", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            //    MenuAdmin adminForm = new MenuAdmin();
+            //    adminForm.Show();
+            //    this.Hide();
+            //}
+            //else if (usuario=="cliente" && contraseña == "5678")
+            //{
+            //    MessageBox.Show("Bienvenido a Tecs", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    VistaCliente ClienteForm = new VistaCliente();
+            //    ClienteForm.Show();
+            //    this.Hide();
+            //}
+
+            //else
+            //{
+            //    MessageBox.Show("Usuario o Contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
         private void btnCerrarLogin_Click(object sender, EventArgs e)
         {
@@ -154,5 +170,6 @@ namespace ConsecionarioTecs
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
     }
 }

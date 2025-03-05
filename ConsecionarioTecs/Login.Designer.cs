@@ -55,6 +55,18 @@
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
+            // ptLogo
+            // 
+            this.ptLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.ptLogo.Image = ((System.Drawing.Image)(resources.GetObject("ptLogo.Image")));
+            this.ptLogo.Location = new System.Drawing.Point(0, 41);
+            this.ptLogo.Name = "ptLogo";
+            this.ptLogo.Size = new System.Drawing.Size(253, 247);
+            this.ptLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptLogo.TabIndex = 0;
+            this.ptLogo.TabStop = false;
+            // 
+
             // label1
             // 
             this.label1.AutoSize = true;
@@ -64,7 +76,6 @@
             this.label1.Size = new System.Drawing.Size(403, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "__________________________________________________________________";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtUsuario
             // 
@@ -75,12 +86,10 @@
             this.txtUsuario.Location = new System.Drawing.Point(316, 84);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(400, 20);
-            this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Text = "USUARIO";
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
-            this.txtUsuario.MouseEnter += new System.EventHandler(this.txtUsuario_MouseEnter);
             // 
             // label2
             // 
@@ -101,7 +110,7 @@
             this.txtContraseña.Location = new System.Drawing.Point(316, 148);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(400, 20);
-            this.txtContraseña.TabIndex = 1;
+            this.txtContraseña.TabIndex = 2;
             this.txtContraseña.Text = "CONTRASEÑA";
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
@@ -146,7 +155,6 @@
             this.lblLogin.Size = new System.Drawing.Size(105, 36);
             this.lblLogin.TabIndex = 8;
             this.lblLogin.Text = "LOGIN";
-            this.lblLogin.Click += new System.EventHandler(this.label3_Click);
             // 
             // button1
             // 
@@ -211,7 +219,6 @@
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptLogo)).EndInit();

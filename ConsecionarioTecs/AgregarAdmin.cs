@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,10 @@ namespace ConsecionarioTecs
             tipo = t;
             InitializeComponent();
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private void btnGuardarAdmin_Click(object sender, EventArgs e)
         {
@@ -28,25 +33,59 @@ namespace ConsecionarioTecs
             switch (tipo)
             {
                 case 1:
-                    cadena = "'" + txtID.Text + "','" + txtNombreAdmin.Text + "','" + txtDireccion.Text + "','" + txtCiudad.Text + "','" + txtContacto.Text + "','" + txtRegion.Text + "','" + txtPais.Text + "','" + txtTelefono.Text + "','" + txtCargo.Text + "','" + txtUsuario.Text + "','" + txtContraseña.Text + "'";
-                    conSQL.insertarDatos("Administradores", "AdministradorID,NombreAdmin,Direccion,Ciudad,Contacto,Region,Pais,Telefono,Cargo,Usuario,Contraseña", cadena);
+                    // Insertar en la tabla Administradores
+                    cadena = "'" + txtNombreAdmin.Text + "','" + txtDireccion.Text + "','" +
+                             txtCiudad.Text + "','" + txtContacto.Text + "','" + txtRegion.Text + "','" + txtPais.Text + "','" +
+                             txtTelefono.Text + "','" + txtCargo.Text + "','" + txtUsuarioAdmin.Text + "','" + txtContraseñaAdmin.Text + "'";
+
+                    conSQL.insertarDatos("Administradores",
+                        "NombreAdmin,Direccion,Ciudad,Contacto,Region,Pais,Telefono,Cargo,UsuarioAdmin,ContraseñaAdmin",
+                        cadena);
+
+                    // Insertar en la tabla Logins con el nombre del administrador
+                    string valoresLogin = "'" + txtNombreAdmin.Text + "','" + txtUsuarioAdmin.Text + "','" + txtContraseñaAdmin.Text + "','Administrador'";
+                    conSQL.insertarDatos("Logins", "Nombre,Usuario,Password,Tipo_usuario", valoresLogin);
                     break;
+
                 case 2:
-                    cadena = "NombreAdmin='" + txtNombreAdmin.Text + "', Direccion='" + txtDireccion.Text +
-                        "', Ciudad='" + txtCiudad.Text + "', Contacto='" + txtContacto.Text +
-                        "', Region='" + txtCiudad.Text + "', Pais='" + txtPais.Text +
-                        "', Telefono='" + txtTelefono.Text + "', Cargo='" + txtCargo.Text +
-                        "', Usuario='" + txtTelefono.Text + "', Contraseña='" + txtContraseña.Text + "'";
-                    conSQL.actualizarDatos("Customers", cadena, "AdministradorID='" + txtID.Text + "'");
+                    // Actualizar datos en la tabla Administradores
+                    cadena = "NombreAdmin='" + txtNombreAdmin.Text +
+                             "', Direccion='" + txtDireccion.Text +
+                             "', Ciudad='" + txtCiudad.Text +
+                             "', Contacto='" + txtContacto.Text +
+                             "', Region='" + txtRegion.Text +
+                             "', Pais='" + txtPais.Text +
+                             "', Telefono='" + txtTelefono.Text +
+                             "', Cargo='" + txtCargo.Text +
+                             "', UsuarioAdmin='" + txtUsuarioAdmin.Text +
+                             "', ContraseñaAdmin='" + txtContraseñaAdmin.Text + "'";
+
+                    conSQL.actualizarDatos("Administradores", cadena, "AdministradorID='" + txtID.Text + "'");
+
+                    // También actualizar la contraseña en la tabla Logins si cambió
+                    string valoresActualizarLogin = "Password='" + txtContraseñaAdmin.Text + "'";
+                    conSQL.actualizarDatos("Logins", valoresActualizarLogin, "Usuario='" + txtUsuarioAdmin.Text + "'");
                     break;
             }
-            frmAdmin.dtgvContenedorAdministradores.DataSource = conSQL.retornaRegistros("Select * from Customers");
+
+            frmAdmin.dtgvContenedorAdministradores.DataSource = conSQL.retornaRegistros("SELECT * FROM Administradores");
             this.Close();
         }
 
         private void btnCancelarAdmin_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCerrarA_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panelAggAdmin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -58,6 +58,12 @@
     <Compile Include="AgregarAdmin.Designer.cs">
       <DependentUpon>AgregarAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarMoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMoto.Designer.cs">
+      <DependentUpon>AgregarMoto.cs</DependentUpon>
+    </Compile>
     <Compile Include="CatalogoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,7 @@
       <DependentUpon>Compra_Proveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion_BDD.cs" />
+    <Compile Include="DBMotos.cs" />
     <Compile Include="Estadisticas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +113,18 @@
     </Compile>
     <Compile Include="Modificar_Clientes.Designer.cs">
       <DependentUpon>Modificar_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MotoCata.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MotoCata.Designer.cs">
+      <DependentUpon>MotoCata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MotoInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MotoInfo.Designer.cs">
+      <DependentUpon>MotoInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Productos.cs">
       <SubType>Form</SubType>
@@ -151,6 +170,9 @@
     <EmbeddedResource Include="AgregarAdmin.resx">
       <DependentUpon>AgregarAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMoto.resx">
+      <DependentUpon>AgregarMoto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CatalogoCliente.resx">
       <DependentUpon>CatalogoCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modificar_Clientes.resx">
       <DependentUpon>Modificar_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MotoCata.resx">
+      <DependentUpon>MotoCata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MotoInfo.resx">
+      <DependentUpon>MotoInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos.resx">
       <DependentUpon>Productos.cs</DependentUpon>
@@ -217,6 +245,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resources\busqueda %281%29.png" />
+    <None Include="resources\busqueda.png" />
+    <None Include="resources\busqueda %281%291.png" />
+    <None Include="resources\cabeza.png" />
     <Content Include="resources\Captura_de_pantalla_2025-02-18_031942-removebg-preview.png" />
     <None Include="resources\Captura_de_pantalla_2025-02-19_043836-removebg-preview.png" />
     <None Include="resources\Captura_de_pantalla_2025-02-19_043633-removebg-preview.png" />
@@ -249,6 +281,7 @@
     <Content Include="resources\logo.jpg" />
     <Content Include="resources\Mobile-Menu-Icon.png" />
     <Content Include="resources\Mobile-Menu-Icon1.png" />
+    <None Include="resources\MotoEjemplo.png" />
     <Content Include="resources\MotoProductos-removebg-preview.png" />
     <None Include="resources\ojo.png" />
     <None Include="resources\ojo %281%29.png" />

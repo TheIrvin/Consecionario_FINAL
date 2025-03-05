@@ -28,6 +28,7 @@ namespace ConsecionarioTecs
                 Database = "CompañiaTecsBDD";
                 Usuario = "AccesoChari";
                 Clave = "accesochari";
+
             }
 
         public Conexion_BDD(string Server, string Database, string Usuario, string Clave)

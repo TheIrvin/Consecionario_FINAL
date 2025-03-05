@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FormularioDeInicio;
 
 namespace ConsecionarioTecs
 {
@@ -16,7 +17,7 @@ namespace ConsecionarioTecs
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new VistaCliente());
         }
     }
 }

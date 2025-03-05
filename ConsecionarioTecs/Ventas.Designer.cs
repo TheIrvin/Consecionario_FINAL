@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventas));
             this.lblVentas = new System.Windows.Forms.Label();
             this.panelVentas = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.lblxVentas = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelContenedorVentas = new System.Windows.Forms.Panel();
             this.tsVentas = new System.Windows.Forms.ToolStrip();
             this.ttlbFiltrar = new System.Windows.Forms.ToolStripLabel();
@@ -48,11 +48,9 @@
             this.tsbtnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnImprimir = new System.Windows.Forms.ToolStripButton();
-            this.dtgvContenedorVentas = new System.Windows.Forms.DataGridView();
             this.panelVentas.SuspendLayout();
             this.panelContenedorVentas.SuspendLayout();
             this.tsVentas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvContenedorVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // lblVentas
@@ -78,14 +76,6 @@
             this.panelVentas.Size = new System.Drawing.Size(800, 35);
             this.panelVentas.TabIndex = 4;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 26);
-            this.panel2.TabIndex = 5;
-            // 
             // lblxVentas
             // 
             this.lblxVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -97,10 +87,17 @@
             this.lblxVentas.TabIndex = 6;
             this.lblxVentas.Text = "X";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(5, 26);
+            this.panel2.TabIndex = 5;
+            // 
             // panelContenedorVentas
             // 
             this.panelContenedorVentas.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panelContenedorVentas.Controls.Add(this.dtgvContenedorVentas);
             this.panelContenedorVentas.Controls.Add(this.tsVentas);
             this.panelContenedorVentas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedorVentas.Location = new System.Drawing.Point(0, 35);
@@ -219,15 +216,6 @@
             this.tsbtnImprimir.Text = "Imprimir";
             this.tsbtnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // dtgvContenedorVentas
-            // 
-            this.dtgvContenedorVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvContenedorVentas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvContenedorVentas.Location = new System.Drawing.Point(0, 25);
-            this.dtgvContenedorVentas.Name = "dtgvContenedorVentas";
-            this.dtgvContenedorVentas.Size = new System.Drawing.Size(800, 390);
-            this.dtgvContenedorVentas.TabIndex = 7;
-            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,7 +232,6 @@
             this.panelContenedorVentas.PerformLayout();
             this.tsVentas.ResumeLayout(false);
             this.tsVentas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvContenedorVentas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,6 +256,5 @@
         private System.Windows.Forms.ToolStripButton tsbtnEliminar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton tsbtnImprimir;
-        private System.Windows.Forms.DataGridView dtgvContenedorVentas;
     }
 }

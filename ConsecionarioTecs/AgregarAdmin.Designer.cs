@@ -116,10 +116,10 @@
             // lblAggAdmin
             // 
             this.lblAggAdmin.AutoSize = true;
-            this.lblAggAdmin.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAggAdmin.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAggAdmin.Location = new System.Drawing.Point(5, 7);
             this.lblAggAdmin.Name = "lblAggAdmin";
-            this.lblAggAdmin.Size = new System.Drawing.Size(234, 24);
+            this.lblAggAdmin.Size = new System.Drawing.Size(239, 24);
             this.lblAggAdmin.TabIndex = 30;
             this.lblAggAdmin.Text = "Agregar Administradores";
             this.lblAggAdmin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -127,10 +127,10 @@
             // lblModificarAdmin
             // 
             this.lblModificarAdmin.AutoSize = true;
-            this.lblModificarAdmin.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModificarAdmin.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModificarAdmin.Location = new System.Drawing.Point(5, 7);
             this.lblModificarAdmin.Name = "lblModificarAdmin";
-            this.lblModificarAdmin.Size = new System.Drawing.Size(247, 24);
+            this.lblModificarAdmin.Size = new System.Drawing.Size(255, 24);
             this.lblModificarAdmin.TabIndex = 31;
             this.lblModificarAdmin.Text = "Modificar Administradores";
             this.lblModificarAdmin.TextAlign = System.Drawing.ContentAlignment.TopCenter;

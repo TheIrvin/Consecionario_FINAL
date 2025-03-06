@@ -9,17 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 namespace ConsecionarioTecs
 {
     public partial class AgregarMoto : Form
     {
-        string connectionString = "Server=ALXJANDR07\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=AleAdmin;Password=161223;";
+        string connectionString = "Server=DESKTOP-9SMDLH8\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=AleAdmin;Password=161223;";
         byte[] imagenBytes = null; // Para almacenar la imagen
         public AgregarMoto()
         {
             InitializeComponent();
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private void btnCerrarAggC_Click(object sender, EventArgs e)
         {
@@ -66,6 +71,12 @@ namespace ConsecionarioTecs
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void panelTopaggMoto_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

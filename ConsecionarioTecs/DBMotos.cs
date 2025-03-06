@@ -27,7 +27,7 @@ namespace ConsecionarioTecs
         public decimal Valoracion { get => valoracion; set => valoracion = value; }
         public byte[] Imagen { get => imagen; set => imagen = value; }
 
-        SqlConnection conexion = new SqlConnection("Server=ALXJANDR07\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=AleAdmin;Password=161223;");
+        SqlConnection conexion = new SqlConnection("Server=DESKTOP-9SMDLH8\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=AccesoChari;Password=accesochari;");
 
         public void llenarBotones(FlowLayoutPanel contenedor)
         {

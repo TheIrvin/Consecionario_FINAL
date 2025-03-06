@@ -49,6 +49,7 @@
             this.tmOcultarMenuCliente = new System.Windows.Forms.Timer(this.components);
             this.btnRestaurar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnCerrarSesionAdmin = new System.Windows.Forms.Button();
             this.panelMenuCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoVistaCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenuCliente)).BeginInit();
@@ -68,6 +69,7 @@
             // panelMenuCliente
             // 
             this.panelMenuCliente.BackColor = System.Drawing.Color.Black;
+            this.panelMenuCliente.Controls.Add(this.btnCerrarSesionAdmin);
             this.panelMenuCliente.Controls.Add(this.panel4);
             this.panelMenuCliente.Controls.Add(this.btnSoporteCliente);
             this.panelMenuCliente.Controls.Add(this.panel3);
@@ -307,6 +309,22 @@
             this.btnMinimizar.TabIndex = 7;
             this.btnMinimizar.UseVisualStyleBackColor = true;
             // 
+            // btnCerrarSesionAdmin
+            // 
+            this.btnCerrarSesionAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCerrarSesionAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesionAdmin.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesionAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MidnightBlue;
+            this.btnCerrarSesionAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnCerrarSesionAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesionAdmin.Image = global::ConsecionarioTecs.Properties.Resources.Captura_de_pantalla_2025_02_19_043836_removebg_preview;
+            this.btnCerrarSesionAdmin.Location = new System.Drawing.Point(3, 497);
+            this.btnCerrarSesionAdmin.Name = "btnCerrarSesionAdmin";
+            this.btnCerrarSesionAdmin.Size = new System.Drawing.Size(43, 40);
+            this.btnCerrarSesionAdmin.TabIndex = 12;
+            this.btnCerrarSesionAdmin.UseVisualStyleBackColor = true;
+            this.btnCerrarSesionAdmin.Click += new System.EventHandler(this.btnCerrarSesionAdmin_Click);
+            // 
             // VistaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,5 +368,6 @@
         private System.Windows.Forms.Timer tmOcultarMenuCliente;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnSoporteCliente;
+        private System.Windows.Forms.Button btnCerrarSesionAdmin;
     }
 }

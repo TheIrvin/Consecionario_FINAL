@@ -122,5 +122,12 @@ namespace FormularioDeInicio
                 fn.Show();
             }
         }
+
+        private void btnCerrarSesionAdmin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            Application.OpenForms["Login"].Show();
+        }
     }
 }

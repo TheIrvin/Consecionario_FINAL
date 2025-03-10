@@ -106,6 +106,7 @@
             this.dtgvContenedorAdministradores.Name = "dtgvContenedorAdministradores";
             this.dtgvContenedorAdministradores.Size = new System.Drawing.Size(800, 390);
             this.dtgvContenedorAdministradores.TabIndex = 10;
+            this.dtgvContenedorAdministradores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvContenedorAdministradores_CellContentClick);
             // 
             // tsAdministradores
             // 

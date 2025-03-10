@@ -145,5 +145,9 @@ namespace FormularioDeInicio
             e.HasMorePages = Bandera < dt.Rows.Count;
         }
 
+        private void dtgvContenedorAdministradores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

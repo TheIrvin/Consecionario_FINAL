@@ -66,7 +66,7 @@ namespace ConsecionarioTecs
 
             switch (tipo)
             {
-                case 1: // Insertar nueva compra
+                case 1: 
                     cadena = "'" + txtBox_PVD_idCompra.Text + "','" + txtBox_PVD_nombreEmpresa.Text + "','" + txtBox_PVD_RUC.Text + "','" +
                              txtBox_PVD_dirección.Text + "','" + txtBox_PVD_contacto.Text + "','" + txtBox_PVD_Email.Text + "','" +
                              txtBox_PVD_teléfono.Text + "','" + txtBox_PVD_modeloMoto.Text + "','" + txtBox_PVD_marcaMoto.Text + "','" +
@@ -78,7 +78,7 @@ namespace ConsecionarioTecs
                         cadena);
                     break;
 
-                case 2: // Actualizar una compra existente
+                case 2: 
                     cadena = "Nombre_Empresa='" + txtBox_PVD_nombreEmpresa.Text + "', RUC_Empresa='" + txtBox_PVD_RUC.Text +
                              "', Direccion='" + txtBox_PVD_dirección.Text + "', Nombre_Contacto='" + txtBox_PVD_contacto.Text +
                              "', Email='" + txtBox_PVD_Email.Text + "', Telefono='" + txtBox_PVD_teléfono.Text +

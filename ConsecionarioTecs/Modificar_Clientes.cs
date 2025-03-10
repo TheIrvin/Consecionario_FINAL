@@ -33,7 +33,6 @@ namespace ConsecionarioTecs
             switch (tipo)
             {
                 case 1:
-                    // Insertar en la tabla Clientes
                     cadena = "'" + txtNombreC.Text + "','" + txtCompañiaC.Text + "','" +
                              txtTituloC.Text + "','" + txtDireccionC.Text + "','" + txtCiudadC.Text + "','" + txtRegionC.Text + "','" +
                              txtPaisC.Text + "','" + txtTelefonoC.Text + "','" + txtUsuarioC.Text + "','" + txtContraseñaC.Text + "'";
@@ -42,13 +41,11 @@ namespace ConsecionarioTecs
                         "NombreCliente,EmpresaCliente,TituloCliente,Dirección,Ciudad,Región,País,Teléfono,LoginUsuario,LoginContraseña",
                         cadena);
 
-                    // Insertar en la tabla Logins con el nombre del cliente
                     string valoresLogin = "'" + txtNombreC.Text + "','" + txtUsuarioC.Text + "','" + txtContraseñaC.Text + "','Usuario'";
                     conSQL.insertarDatos("Logins", "Nombre,Usuario,Password,Tipo_usuario", valoresLogin);
                     break;
 
                 case 2:
-                    // Actualizar datos en la tabla Clientes
                     cadena = "NombreCliente='" + txtNombreC.Text +
                              "', EmpresaCliente='" + txtCompañiaC.Text +
                              "', TituloCliente='" + txtTituloC.Text +
@@ -62,7 +59,6 @@ namespace ConsecionarioTecs
 
                     conSQL.actualizarDatos("Clientes", cadena, "ClienteID='" + txtIDc.Text + "'");
 
-                    // También actualizar la contraseña en la tabla Logins si cambió
                     string valoresActualizarLogin = "Password='" + txtContraseñaC.Text + "'";
                     conSQL.actualizarDatos("Logins", valoresActualizarLogin, "Usuario='" + txtUsuarioC.Text + "'");
                     break;
@@ -72,11 +68,7 @@ namespace ConsecionarioTecs
             this.Close();
 
 
-            //Clientes frmCs = Owner as Clientes;
-            //cadena = "'" + txtNombreC.Text + "','" + txtCompañiaC.Text + "','" + txtTituloC.Text + "','" + txtDireccionC.Text + "','" + txtCiudadC.Text + "','" + txtRegionC.Text + "','" + txtPaisC.Text + "','" + txtTelefonoC.Text + "','" + txtUsuarioC.Text + "','" + txtContraseñaC.Text + "'";
-            //ConexionClientes.insertarDatos("Clientes", "[Nombre Cliente],[Empresa Cliente],[Titulo Cliente],Dirección,Ciudad,Región,País,Teléfono,[Login Usuario],[Login Contraseña]", cadena);
-            //frmCs.dtgvContenedorClientes.DataSource = ConexionClientes.retornaRegistros("Select * from Clientes");
-            //this.Close();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -152,6 +152,12 @@
     <Compile Include="Administradores.Designer.cs">
       <DependentUpon>Administradores.cs</DependentUpon>
     </Compile>
+    <Compile Include="TarjetaCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TarjetaCredito.Designer.cs">
+      <DependentUpon>TarjetaCredito.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas.cs">
       <SubType>Form</SubType>
     </Compile>

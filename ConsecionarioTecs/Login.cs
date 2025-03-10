@@ -15,7 +15,7 @@ namespace ConsecionarioTecs
 {
     public partial class Login : Form
     {
-        string connectionString = "Server=DESKTOP-9SMDLH8\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=AccesoChari;Password=accesochari;";
+        string connectionString = "Server=ALXJANDR07\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=AleAdmin;Password=luis;";
         public Login()
         {
             InitializeComponent();
@@ -171,5 +171,9 @@ namespace ConsecionarioTecs
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

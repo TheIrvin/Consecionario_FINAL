@@ -15,7 +15,7 @@ namespace ConsecionarioTecs
 {
     public partial class AgregarMoto : Form
     {
-        string connectionString = "Server=DESKTOP-9SMDLH8\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=AleAdmin;Password=161223;";
+        string connectionString = "Server=ALXJANDR07\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=AleAdmin;Password=luis;";
         byte[] imagenBytes = null; // Para almacenar la imagen
         public AgregarMoto()
         {
@@ -77,6 +77,11 @@ namespace ConsecionarioTecs
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panelTopaggMoto_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

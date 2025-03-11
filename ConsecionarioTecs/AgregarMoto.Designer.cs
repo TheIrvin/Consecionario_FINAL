@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarMoto));
             this.panelTopaggMoto = new System.Windows.Forms.Panel();
+            this.lblModiMoto = new System.Windows.Forms.Label();
             this.btnCerrarAggC = new System.Windows.Forms.Button();
             this.lblAggMoto = new System.Windows.Forms.Label();
             this.panelCentroMotos = new System.Windows.Forms.Panel();
@@ -54,7 +55,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblaggNameMoto = new System.Windows.Forms.Label();
-            this.lblModiMoto = new System.Windows.Forms.Label();
             this.panelTopaggMoto.SuspendLayout();
             this.panelCentroMotos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenMoto)).BeginInit();
@@ -75,7 +75,19 @@
             this.panelTopaggMoto.Name = "panelTopaggMoto";
             this.panelTopaggMoto.Size = new System.Drawing.Size(387, 45);
             this.panelTopaggMoto.TabIndex = 0;
+            this.panelTopaggMoto.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTopaggMoto_Paint);
             this.panelTopaggMoto.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTopaggMoto_MouseDown);
+            // 
+            // lblModiMoto
+            // 
+            this.lblModiMoto.AutoSize = true;
+            this.lblModiMoto.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModiMoto.Location = new System.Drawing.Point(5, 10);
+            this.lblModiMoto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModiMoto.Name = "lblModiMoto";
+            this.lblModiMoto.Size = new System.Drawing.Size(140, 22);
+            this.lblModiMoto.TabIndex = 37;
+            this.lblModiMoto.Text = "Modificar Moto";
             // 
             // btnCerrarAggC
             // 
@@ -379,17 +391,6 @@
             this.lblaggNameMoto.Size = new System.Drawing.Size(66, 19);
             this.lblaggNameMoto.TabIndex = 36;
             this.lblaggNameMoto.Text = "Modelo:";
-            // 
-            // lblModiMoto
-            // 
-            this.lblModiMoto.AutoSize = true;
-            this.lblModiMoto.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModiMoto.Location = new System.Drawing.Point(5, 10);
-            this.lblModiMoto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblModiMoto.Name = "lblModiMoto";
-            this.lblModiMoto.Size = new System.Drawing.Size(140, 22);
-            this.lblModiMoto.TabIndex = 37;
-            this.lblModiMoto.Text = "Modificar Moto";
             // 
             // AgregarMoto
             // 

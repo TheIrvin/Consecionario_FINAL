@@ -79,10 +79,12 @@ namespace FormularioDeInicio
             modiAdmin.txtDireccionC.Text = dtgvContenedorClientes[4, dtgvContenedorClientes.CurrentRow.Index].Value.ToString();
             modiAdmin.txtCiudadC.Text = dtgvContenedorClientes[5, dtgvContenedorClientes.CurrentRow.Index].Value.ToString();
             modiAdmin.txtRegionC.Text = dtgvContenedorClientes[6, dtgvContenedorClientes.CurrentRow.Index].Value.ToString();
-            modiAdmin.txtPaisC.Text = dtgvContenedorClientes[7, dtgvContenedorClientes.CurrentRow.Index].Value.ToString();
+            modiAdmin.cboxPais.Text = dtgvContenedorClientes[7, dtgvContenedorClientes.CurrentRow.Index].Value.ToString();
             modiAdmin.txtTelefonoC.Text = dtgvContenedorClientes[8, dtgvContenedorClientes.CurrentRow.Index].Value.ToString();
-            modiAdmin.txtUsuarioC.Text = dtgvContenedorClientes[9, dtgvContenedorClientes.CurrentRow.Index].Value.ToString();
-            modiAdmin.txtContraseñaC.Text = dtgvContenedorClientes[10, dtgvContenedorClientes.CurrentRow.Index].Value.ToString();
+            modiAdmin.txtEmailCli.Text = dtgvContenedorClientes[9, dtgvContenedorClientes.CurrentRow.Index].Value.ToString();
+            modiAdmin.mFechaRegistroC.Text = dtgvContenedorClientes[10, dtgvContenedorClientes.CurrentRow.Index].Value.ToString();
+            modiAdmin.cboxEstadoCli.Text = dtgvContenedorClientes[11, dtgvContenedorClientes.CurrentRow.Index].Value.ToString();
+            modiAdmin.txtCedulaCli.Text = dtgvContenedorClientes[12, dtgvContenedorClientes.CurrentRow.Index].Value.ToString();
             modiAdmin.txtIDc.Enabled = false; //puedo cambiar lo que sea, menos el código y por eso está en false
             modiAdmin.Show();
         }
@@ -137,6 +139,11 @@ namespace FormularioDeInicio
                 y += 20;
             }
             e.HasMorePages = Bandera < dt.Rows.Count;
+        }
+
+        private void panelClientes_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

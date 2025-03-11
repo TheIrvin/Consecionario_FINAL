@@ -35,12 +35,15 @@ namespace ConsecionarioTecs
                 case 1:
                     cadena = "'" + txtNombreC.Text + "','" + txtCompañiaC.Text + "','" +
                              txtTituloC.Text + "','" + txtDireccionC.Text + "','" + txtCiudadC.Text + "','" + txtRegionC.Text + "','" +
-                             txtPaisC.Text + "','" + txtTelefonoC.Text + "','" + txtUsuarioC.Text + "','" + txtContraseñaC.Text + "'";
+                             cboxPais.Text + "','" + txtTelefonoC.Text + "','" + txtEmailCli.Text + "','" + mFechaRegistroC.Text + "'" + cboxEstadoCli.Text + "'" + txtCedulaCli.Text + "'";
 
                     conSQL.insertarDatos("Clientes",
-                        "NombreCliente,EmpresaCliente,TituloCliente,Dirección,Ciudad,Región,País,Teléfono,LoginUsuario,LoginContraseña",
+                        "NombreCliente,EmpresaCliente,TituloCliente,Dirección,Ciudad,Región,País,Teléfono,Email,FechaRegistro,EstadoCliente,Cedula",
                         cadena);
 
+                    // Insertar en la tabla Logins con el nombre del cliente
+                    //string valoresLogin = "'" + txtNombreC.Text + "','" + txtEmailCli.Text + "','" + txtEmailCli.Text + "','Usuario'";
+                    //conSQL.insertarDatos("Logins", "Nombre,Usuario,Password,Tipo_usuario", valoresLogin);
                     string valoresLogin = "'" + txtNombreC.Text + "','" + txtUsuarioC.Text + "','" + txtContraseñaC.Text + "','Usuario'";
                     conSQL.insertarDatos("Logins", "Nombre,Usuario,Password,Tipo_usuario", valoresLogin);
                     break;
@@ -52,12 +55,18 @@ namespace ConsecionarioTecs
                              "', Dirección='" + txtDireccionC.Text +
                              "', Ciudad='" + txtCiudadC.Text +
                              "', Región='" + txtRegionC.Text +
-                             "', País='" + txtPaisC.Text +
+                             "', País='" + cboxPais.Text +
                              "', Teléfono='" + txtTelefonoC.Text +
-                             "', LoginUsuario='" + txtUsuarioC.Text +
-                             "', LoginContraseña='" + txtContraseñaC.Text + "'";
+                             "', Email='" + txtEmailCli.Text +
+                             "', FechaRegistro='" + mFechaRegistroC.Text +
+                             "', EstadoCliente='" + cboxEstadoCli.Text +
+                             "', Cedula='" + txtCedulaCli.Text + "'";
 
                     conSQL.actualizarDatos("Clientes", cadena, "ClienteID='" + txtIDc.Text + "'");
+
+                    // También actualizar la contraseña en la tabla Logins si cambió
+                    //string valoresActualizarLogin = "Password='" + txtEmailCli.Text + "'";
+                    //conSQL.actualizarDatos("Logins", valoresActualizarLogin, "Usuario='" + txtUsuarioC.Text + "'");
 
                     string valoresActualizarLogin = "Password='" + txtContraseñaC.Text + "'";
                     conSQL.actualizarDatos("Logins", valoresActualizarLogin, "Usuario='" + txtUsuarioC.Text + "'");
@@ -90,6 +99,11 @@ namespace ConsecionarioTecs
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panelModificarC_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

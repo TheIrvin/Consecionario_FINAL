@@ -39,15 +39,8 @@ namespace ConsecionarioTecs
 
                     conSQL.insertarDatos("Clientes",
                         "NombreCliente,EmpresaCliente,TituloCliente,Dirección,Ciudad,Región,País,Teléfono,Email,FechaRegistro,EstadoCliente,Cedula",
-                        cadena);
-
-                    // Insertar en la tabla Logins con el nombre del cliente
-                    //string valoresLogin = "'" + txtNombreC.Text + "','" + txtEmailCli.Text + "','" + txtEmailCli.Text + "','Usuario'";
-                    //conSQL.insertarDatos("Logins", "Nombre,Usuario,Password,Tipo_usuario", valoresLogin);
-                    string valoresLogin = "'" + txtNombreC.Text + "','" + txtUsuarioC.Text + "','" + txtContraseñaC.Text + "','Usuario'";
-                    conSQL.insertarDatos("Logins", "Nombre,Usuario,Password,Tipo_usuario", valoresLogin);
+                        cadena);                
                     break;
-
                 case 2:
                     cadena = "NombreCliente='" + txtNombreC.Text +
                              "', EmpresaCliente='" + txtCompañiaC.Text +
@@ -62,14 +55,7 @@ namespace ConsecionarioTecs
                              "', EstadoCliente='" + cboxEstadoCli.Text +
                              "', Cedula='" + txtCedulaCli.Text + "'";
 
-                    conSQL.actualizarDatos("Clientes", cadena, "ClienteID='" + txtIDc.Text + "'");
-
-                    // También actualizar la contraseña en la tabla Logins si cambió
-                    //string valoresActualizarLogin = "Password='" + txtEmailCli.Text + "'";
-                    //conSQL.actualizarDatos("Logins", valoresActualizarLogin, "Usuario='" + txtUsuarioC.Text + "'");
-
-                    string valoresActualizarLogin = "Password='" + txtContraseñaC.Text + "'";
-                    conSQL.actualizarDatos("Logins", valoresActualizarLogin, "Usuario='" + txtUsuarioC.Text + "'");
+                    conSQL.actualizarDatos("Clientes", cadena, "ClienteID='" + txtIDc.Text + "'");                 
                     break;
             }
 

@@ -12,10 +12,10 @@ using ConsecionarioTecs;
 
 namespace FormularioDeInicio
 {
-    public partial class MenuAdmin : Form
+    public partial class AdminMenu : Form
     {
 
-        public MenuAdmin()
+        public AdminMenu()
         {
             InitializeComponent();
         }
@@ -112,7 +112,7 @@ namespace FormularioDeInicio
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AbrirEnPanel(new Compra_Proveedor());
+            AbrirEnPanel(new Compras_Menu());
         }
 
         private void button3_Click(object sender, EventArgs e)

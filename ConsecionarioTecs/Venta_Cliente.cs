@@ -33,5 +33,10 @@ namespace FormularioDeInicio
                 picBox_ventaCliente.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
+
+        private void bt_enviarPropuesta_ventaCliente_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Usted ha enviado correctamente la propuesta de venta de su moto. Espere la confirmación del comprador.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace FormularioDeInicio
 {
-    partial class MenuAdmin
+    partial class AdminMenu
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAdmin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMenu));
             this.panelCabecera = new System.Windows.Forms.Panel();
             this.btnRestaurar = new System.Windows.Forms.Button();
             this.btnMinimizarM = new System.Windows.Forms.Button();
@@ -174,7 +174,7 @@
             this.btnCerrarSesionAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCerrarSesionAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesionAdmin.Image = global::ConsecionarioTecs.Properties.Resources.Captura_de_pantalla_2025_02_19_043836_removebg_preview;
-            this.btnCerrarSesionAdmin.Location = new System.Drawing.Point(2, 498);
+            this.btnCerrarSesionAdmin.Location = new System.Drawing.Point(2, 581);
             this.btnCerrarSesionAdmin.Name = "btnCerrarSesionAdmin";
             this.btnCerrarSesionAdmin.Size = new System.Drawing.Size(43, 40);
             this.btnCerrarSesionAdmin.TabIndex = 3;
@@ -379,6 +379,7 @@
             this.PanelContenedor.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.PanelContenedor.Location = new System.Drawing.Point(220, 40);
             this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PanelContenedor.Size = new System.Drawing.Size(880, 540);
             this.PanelContenedor.TabIndex = 2;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
@@ -391,7 +392,7 @@
             // 
             this.tmMostrarMenu.Tick += new System.EventHandler(this.tmMostrarMenu_Tick);
             // 
-            // MenuAdmin
+            // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -401,7 +402,7 @@
             this.Controls.Add(this.panelCabecera);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "MenuAdmin";
+            this.Name = "AdminMenu";
             this.Text = "Form1";
             this.panelCabecera.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);

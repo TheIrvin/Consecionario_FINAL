@@ -33,22 +33,18 @@ namespace ConsecionarioTecs
             switch (tipo)
             {
                 case 1:
-                    // Insertar en la tabla Administradores
                     cadena = "'" + txtNombreAdmin.Text + "','" + txtDireccion.Text + "','" +
                              txtCiudad.Text + "','" + txtContacto.Text + "','" + txtRegion.Text + "','" + txtPais.Text + "','" +
                              txtTelefono.Text + "','" + txtCargo.Text + "','" + txtUsuarioAdmin.Text + "','" + txtContraseñaAdmin.Text + "'";
 
-                    conSQL.insertarDatos("Administradores",
-                        "NombreAdmin,Direccion,Ciudad,Contacto,Region,Pais,Telefono,Cargo,UsuarioAdmin,ContraseñaAdmin",
+                    conSQL.insertarDatos("Administradores",                                  "NombreAdmin,Direccion,Ciudad,Contacto,Region,Pais,Telefono,Cargo,UsuarioAdmin,ContraseñaAdmin",
                         cadena);
 
-                    // Insertar en la tabla Logins con el nombre del administrador
                     string valoresLogin = "'" + txtNombreAdmin.Text + "','" + txtUsuarioAdmin.Text + "','" + txtContraseñaAdmin.Text + "','Administrador'";
                     conSQL.insertarDatos("Logins", "Nombre,Usuario,Password,Tipo_usuario", valoresLogin);
                     break;
 
                 case 2:
-                    // Actualizar datos en la tabla Administradores
                     cadena = "NombreAdmin='" + txtNombreAdmin.Text +
                              "', Direccion='" + txtDireccion.Text +
                              "', Ciudad='" + txtCiudad.Text +
@@ -62,7 +58,6 @@ namespace ConsecionarioTecs
 
                     conSQL.actualizarDatos("Administradores", cadena, "AdministradorID='" + txtID.Text + "'");
 
-                    // También actualizar la contraseña en la tabla Logins si cambió
                     string valoresActualizarLogin = "Password='" + txtContraseñaAdmin.Text + "'";
                     conSQL.actualizarDatos("Logins", valoresActualizarLogin, "Usuario='" + txtUsuarioAdmin.Text + "'");
                     break;

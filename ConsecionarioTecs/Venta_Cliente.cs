@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsecionarioTecs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +22,9 @@ namespace FormularioDeInicio
         {
 
         }
+        private Evaluar_compraCliente evaluarCl;
 
+      
         private void bt_aggImagen_ventaMoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -36,7 +39,23 @@ namespace FormularioDeInicio
 
         private void bt_enviarPropuesta_ventaCliente_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Usted ha enviado correctamente la propuesta de venta de su moto. Espere la confirmación del comprador.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            txtBox_idMoto_dueñoMoto.Text = "";
+            txtBox_dueñoMoto.Text = "";
+            txtBox_cédula_dueñoMoto.Text = "";
+            txtBox_teléfono_dueñoMoto.Text = "";
+            txtBox_email_dueñoMoto.Text = "";
+            txtBox_modeloMoto_dueñoMoto.Text = "";
+            txtBox_marcaMoto_dueñoMoto.Text = "";
+            txtBox_añoMoto_dueñoMoto.Text = "";
+            txtBox_estadoMoto_dueñoMoto.Text = "";
+            txtBox_descripción_dueñoMoto.Text = "";
+            txtBox_placaMoto_dueñoMoto.Text = "";
+            txtBox_kilometraje_motoDueño.Text = "";
+            txtBox_precio_motoDueño.Text = "";
+            cBox_Valoracion_dueñoMoto.SelectedIndex = -1; 
+            picBox_ventaCliente.Image = null;
+
+            MessageBox.Show("Usted ha enviado correctamente la propuesta de venta de su moto. Espere la confirmación del Concesionario.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

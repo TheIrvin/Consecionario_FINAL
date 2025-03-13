@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaCliente));
             this.PanelContenedorCliente = new System.Windows.Forms.Panel();
             this.panelMenuCliente = new System.Windows.Forms.Panel();
+            this.btnCerrarSesionAdmin = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSoporteCliente = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -49,7 +50,8 @@
             this.tmOcultarMenuCliente = new System.Windows.Forms.Timer(this.components);
             this.btnRestaurar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnCerrarSesionAdmin = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelMenuCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoVistaCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenuCliente)).BeginInit();
@@ -69,6 +71,8 @@
             // panelMenuCliente
             // 
             this.panelMenuCliente.BackColor = System.Drawing.Color.Black;
+            this.panelMenuCliente.Controls.Add(this.panel1);
+            this.panelMenuCliente.Controls.Add(this.button1);
             this.panelMenuCliente.Controls.Add(this.btnCerrarSesionAdmin);
             this.panelMenuCliente.Controls.Add(this.panel4);
             this.panelMenuCliente.Controls.Add(this.btnSoporteCliente);
@@ -84,11 +88,28 @@
             this.panelMenuCliente.Name = "panelMenuCliente";
             this.panelMenuCliente.Size = new System.Drawing.Size(220, 540);
             this.panelMenuCliente.TabIndex = 1;
+            this.panelMenuCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenuCliente_Paint);
+            // 
+            // btnCerrarSesionAdmin
+            // 
+            this.btnCerrarSesionAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCerrarSesionAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesionAdmin.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesionAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MidnightBlue;
+            this.btnCerrarSesionAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnCerrarSesionAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesionAdmin.Image = global::ConsecionarioTecs.Properties.Resources.Captura_de_pantalla_2025_02_19_043836_removebg_preview;
+            this.btnCerrarSesionAdmin.Location = new System.Drawing.Point(3, 497);
+            this.btnCerrarSesionAdmin.Name = "btnCerrarSesionAdmin";
+            this.btnCerrarSesionAdmin.Size = new System.Drawing.Size(43, 40);
+            this.btnCerrarSesionAdmin.TabIndex = 12;
+            this.btnCerrarSesionAdmin.UseVisualStyleBackColor = true;
+            this.btnCerrarSesionAdmin.Click += new System.EventHandler(this.btnCerrarSesionAdmin_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel4.Location = new System.Drawing.Point(0, 315);
+            this.panel4.Location = new System.Drawing.Point(0, 367);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(5, 50);
             this.panel4.TabIndex = 11;
@@ -104,7 +125,7 @@
             this.btnSoporteCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSoporteCliente.Image = global::ConsecionarioTecs.Properties.Resources.clientes;
             this.btnSoporteCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSoporteCliente.Location = new System.Drawing.Point(0, 315);
+            this.btnSoporteCliente.Location = new System.Drawing.Point(0, 367);
             this.btnSoporteCliente.Name = "btnSoporteCliente";
             this.btnSoporteCliente.Size = new System.Drawing.Size(220, 50);
             this.btnSoporteCliente.TabIndex = 10;
@@ -309,21 +330,32 @@
             this.btnMinimizar.TabIndex = 7;
             this.btnMinimizar.UseVisualStyleBackColor = true;
             // 
-            // btnCerrarSesionAdmin
+            // panel1
             // 
-            this.btnCerrarSesionAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCerrarSesionAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarSesionAdmin.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesionAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MidnightBlue;
-            this.btnCerrarSesionAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnCerrarSesionAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesionAdmin.Image = global::ConsecionarioTecs.Properties.Resources.Captura_de_pantalla_2025_02_19_043836_removebg_preview;
-            this.btnCerrarSesionAdmin.Location = new System.Drawing.Point(3, 497);
-            this.btnCerrarSesionAdmin.Name = "btnCerrarSesionAdmin";
-            this.btnCerrarSesionAdmin.Size = new System.Drawing.Size(43, 40);
-            this.btnCerrarSesionAdmin.TabIndex = 12;
-            this.btnCerrarSesionAdmin.UseVisualStyleBackColor = true;
-            this.btnCerrarSesionAdmin.Click += new System.EventHandler(this.btnCerrarSesionAdmin_Click);
+            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Location = new System.Drawing.Point(0, 311);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 50);
+            this.panel1.TabIndex = 14;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = global::ConsecionarioTecs.Properties.Resources.clientes;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 311);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(220, 50);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "    enviar info";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // VistaCliente
             // 
@@ -369,5 +401,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnSoporteCliente;
         private System.Windows.Forms.Button btnCerrarSesionAdmin;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -39,21 +39,22 @@
             // 
             // pnl_Compra_Menu
             // 
-            this.pnl_Compra_Menu.Location = new System.Drawing.Point(0, 24);
+            this.pnl_Compra_Menu.Location = new System.Drawing.Point(0, 29);
             this.pnl_Compra_Menu.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.pnl_Compra_Menu.Name = "pnl_Compra_Menu";
-            this.pnl_Compra_Menu.Size = new System.Drawing.Size(880, 540);
+            this.pnl_Compra_Menu.Size = new System.Drawing.Size(880, 535);
             this.pnl_Compra_Menu.TabIndex = 0;
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
+            this.menuStrip1.BackColor = System.Drawing.Color.DarkGray;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verProveedoresToolStripMenuItem,
             this.sugerenciaDeCompraToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(880, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(880, 29);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,13 +63,13 @@
             this.verProveedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.visualizarProveedoreToolStripMenuItem});
             this.verProveedoresToolStripMenuItem.Name = "verProveedoresToolStripMenuItem";
-            this.verProveedoresToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.verProveedoresToolStripMenuItem.Size = new System.Drawing.Size(119, 25);
             this.verProveedoresToolStripMenuItem.Text = " Proveedores";
             // 
             // visualizarProveedoreToolStripMenuItem
             // 
             this.visualizarProveedoreToolStripMenuItem.Name = "visualizarProveedoreToolStripMenuItem";
-            this.visualizarProveedoreToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.visualizarProveedoreToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
             this.visualizarProveedoreToolStripMenuItem.Text = "Agregar Proveedor";
             this.visualizarProveedoreToolStripMenuItem.Click += new System.EventHandler(this.visualizarProveedoreToolStripMenuItem_Click_1);
             // 
@@ -77,13 +78,13 @@
             this.sugerenciaDeCompraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clienteToolStripMenuItem});
             this.sugerenciaDeCompraToolStripMenuItem.Name = "sugerenciaDeCompraToolStripMenuItem";
-            this.sugerenciaDeCompraToolStripMenuItem.Size = new System.Drawing.Size(139, 20);
+            this.sugerenciaDeCompraToolStripMenuItem.Size = new System.Drawing.Size(188, 25);
             this.sugerenciaDeCompraToolStripMenuItem.Text = "Sugerencia de Compra";
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
@@ -105,12 +106,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnl_Compra_Menu;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem verProveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarProveedoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sugerenciaDeCompraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
+        public System.Windows.Forms.Panel pnl_Compra_Menu;
     }
 }

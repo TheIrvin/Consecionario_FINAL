@@ -16,6 +16,7 @@ namespace ConsecionarioTecs
         {
             InitializeComponent();
         }
+        
         private void AbrirEnPanel(Form formNij0)
         {
             if (this.pnl_Compra_Menu.Controls.Count > 0)

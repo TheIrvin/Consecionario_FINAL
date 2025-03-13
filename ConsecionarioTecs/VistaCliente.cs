@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using ConsecionarioTecs;
 
 
 namespace FormularioDeInicio
@@ -22,7 +23,6 @@ namespace FormularioDeInicio
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
         private void btnCerrarCliente_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -128,6 +128,17 @@ namespace FormularioDeInicio
             this.Close();
 
             Application.OpenForms["Login"].Show();
+        }
+
+        private void panelMenuCliente_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnVentaRechazada_Click(object sender, EventArgs e)
+        {
+            Mensaje_RechazoCliente msgRechazo = new Mensaje_RechazoCliente();
+
         }
     }
 }

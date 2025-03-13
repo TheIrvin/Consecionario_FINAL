@@ -138,7 +138,7 @@
             this.lnklConPerdida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lnklConPerdida.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnklConPerdida.LinkColor = System.Drawing.Color.Black;
-            this.lnklConPerdida.Location = new System.Drawing.Point(437, 282);
+            this.lnklConPerdida.Location = new System.Drawing.Point(437, 283);
             this.lnklConPerdida.Name = "lnklConPerdida";
             this.lnklConPerdida.Size = new System.Drawing.Size(162, 15);
             this.lnklConPerdida.TabIndex = 0;

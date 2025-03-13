@@ -217,7 +217,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(5, 76);
+            this.label7.Location = new System.Drawing.Point(6, 79);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 22);
@@ -390,7 +390,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel8.Location = new System.Drawing.Point(0, 74);
+            this.panel8.Location = new System.Drawing.Point(1, 77);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(5, 26);
             this.panel8.TabIndex = 72;

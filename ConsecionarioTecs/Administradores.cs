@@ -77,7 +77,7 @@ namespace FormularioDeInicio
             modiAdmin.txtNombreAdmin.Text = dtgvContenedorAdministradores[1, dtgvContenedorAdministradores.CurrentRow.Index].Value.ToString();
             modiAdmin.txtDireccion.Text = dtgvContenedorAdministradores[2, dtgvContenedorAdministradores.CurrentRow.Index].Value.ToString();
             modiAdmin.txtCiudad.Text = dtgvContenedorAdministradores[3, dtgvContenedorAdministradores.CurrentRow.Index].Value.ToString();
-            modiAdmin.txtContacto.Text = dtgvContenedorAdministradores[4, dtgvContenedorAdministradores.CurrentRow.Index].Value.ToString();
+            modiAdmin.txtSucursal.Text = dtgvContenedorAdministradores[4, dtgvContenedorAdministradores.CurrentRow.Index].Value.ToString();
             modiAdmin.txtRegion.Text = dtgvContenedorAdministradores[5, dtgvContenedorAdministradores.CurrentRow.Index].Value.ToString();
             modiAdmin.txtPais.Text = dtgvContenedorAdministradores[6, dtgvContenedorAdministradores.CurrentRow.Index].Value.ToString();
             modiAdmin.txtTelefono.Text = dtgvContenedorAdministradores[7, dtgvContenedorAdministradores.CurrentRow.Index].Value.ToString();

@@ -35,11 +35,11 @@ namespace ConsecionarioTecs
                 case 1:
                     // Insertar en la tabla Administradores
                     cadena = "'" + txtNombreAdmin.Text + "','" + txtDireccion.Text + "','" +
-                             txtCiudad.Text + "','" + txtContacto.Text + "','" + txtRegion.Text + "','" + txtPais.Text + "','" +
-                             txtTelefono.Text + "','" + txtCargo.Text + "','" + txtUsuarioAdmin.Text + "','" + txtContraseñaAdmin.Text + "'";
+                             txtCiudad.Text + "','"  + txtRegion.Text + "','" + cboxPaisUsu.Text + "','" +
+                             txtTelefono.Text + "','" + txtUsuarioAdmin.Text + "','" + txtContraseñaAdmin.Text + "','" + cboxCargo.Text + "','" + txtSucursal.Text + "'";
 
                     conSQL.insertarDatos("Administradores",
-                        "NombreAdmin,Direccion,Ciudad,Contacto,Region,Pais,Telefono,Cargo,UsuarioAdmin,ContraseñaAdmin",
+                        "NombreAdmin,Email,Ciudad,Region,Pais,Telefono,User,Password,RolApp,Sucursal",
                         cadena);
 
                     // Insertar en la tabla Logins con el nombre del administrador
@@ -52,13 +52,13 @@ namespace ConsecionarioTecs
                     cadena = "NombreAdmin='" + txtNombreAdmin.Text +
                              "', Direccion='" + txtDireccion.Text +
                              "', Ciudad='" + txtCiudad.Text +
-                             "', Contacto='" + txtContacto.Text +
                              "', Region='" + txtRegion.Text +
-                             "', Pais='" + txtPais.Text +
+                             "', Pais='" + cboxPaisUsu.Text +
                              "', Telefono='" + txtTelefono.Text +
-                             "', Cargo='" + txtCargo.Text +
                              "', UsuarioAdmin='" + txtUsuarioAdmin.Text +
-                             "', ContraseñaAdmin='" + txtContraseñaAdmin.Text + "'";
+                             "', ContraseñaAdmin='" + txtContraseñaAdmin.Text +
+                             "', Cargo='" + cboxCargo.Text +
+                             "', Sucursal='" + txtSucursal.Text + "'";
 
                     conSQL.actualizarDatos("Administradores", cadena, "AdministradorID='" + txtID.Text + "'");
 
@@ -86,6 +86,11 @@ namespace ConsecionarioTecs
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void AgregarAdmin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

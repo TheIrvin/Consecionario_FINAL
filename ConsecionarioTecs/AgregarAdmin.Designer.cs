@@ -183,7 +183,7 @@
             // 
             this.txtDireccion.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtDireccion.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(106, 76);
+            this.txtDireccion.Location = new System.Drawing.Point(106, 77);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDireccion.MaxLength = 60;
             this.txtDireccion.Name = "txtDireccion";

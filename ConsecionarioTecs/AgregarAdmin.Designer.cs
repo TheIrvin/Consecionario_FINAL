@@ -45,7 +45,6 @@
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtCiudad = new System.Windows.Forms.TextBox();
-            this.txtPais = new System.Windows.Forms.TextBox();
             this.txtCargo = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtRegion = new System.Windows.Forms.TextBox();
@@ -67,6 +66,7 @@
             this.txtContacto = new System.Windows.Forms.TextBox();
             this.btnGuardarAdmin = new System.Windows.Forms.Button();
             this.btnCancelarAdmin = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panelAggAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -263,17 +263,6 @@
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(171, 29);
             this.txtCiudad.TabIndex = 4;
-            // 
-            // txtPais
-            // 
-            this.txtPais.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtPais.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPais.Location = new System.Drawing.Point(436, 194);
-            this.txtPais.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPais.MaxLength = 20;
-            this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(201, 29);
-            this.txtPais.TabIndex = 7;
             // 
             // txtCargo
             // 
@@ -488,12 +477,216 @@
             this.btnCancelarAdmin.UseVisualStyleBackColor = false;
             this.btnCancelarAdmin.Click += new System.EventHandler(this.btnCancelarAdmin_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Afganistán",
+            "Albania",
+            "Alemania",
+            "Andorra",
+            "Angola",
+            "Antigua y Barbuda",
+            "Arabia Saudita",
+            "Argelia",
+            "Argentina",
+            "Armenia",
+            "Australia",
+            "Austria",
+            "Azerbaiyán",
+            "Bahamas",
+            "Bangladés",
+            "Barbados",
+            "Baréin",
+            "Bélgica",
+            "Belice",
+            "Benín",
+            "Bielorrusia",
+            "Birmania",
+            "Bolivia",
+            "Bosnia y Herzegovina",
+            "Botsuana",
+            "Brasil",
+            "Brunéi",
+            "Bulgaria",
+            "Burkina Faso",
+            "Burundi",
+            "Bután",
+            "Cabo Verde",
+            "Camboya",
+            "Camerún",
+            "Canadá",
+            "Catar",
+            "Chad",
+            "Chile",
+            "China",
+            "Chipre",
+            "Colombia",
+            "Comoras",
+            "Corea del Norte",
+            "Corea del Sur",
+            "Costa de Marfil",
+            "Costa Rica",
+            "Croacia",
+            "Cuba",
+            "Dinamarca",
+            "Dominica",
+            "Ecuador",
+            "Egipto",
+            "El Salvador",
+            "Emiratos Árabes Unidos",
+            "Eritrea",
+            "Eslovaquia",
+            "Eslovenia",
+            "España",
+            "Estados Unidos",
+            "Estonia",
+            "Etiopía",
+            "Filipinas",
+            "Finlandia",
+            "Fiyi",
+            "Francia",
+            "Gabón",
+            "Gambia",
+            "Georgia",
+            "Ghana",
+            "Granada",
+            "Grecia",
+            "Guatemala",
+            "Guinea",
+            "Guinea-Bisáu",
+            "Guinea Ecuatorial",
+            "Guyana",
+            "Haití",
+            "Honduras",
+            "Hungría",
+            "India",
+            "Indonesia",
+            "Irak",
+            "Irán",
+            "Irlanda",
+            "Islandia",
+            "Islas Marshall",
+            "Islas Salomón",
+            "Israel",
+            "Italia",
+            "Jamaica",
+            "Japón",
+            "Jordania",
+            "Kazajistán",
+            "Kenia",
+            "Kirguistán",
+            "Kiribati",
+            "Kuwait",
+            "Laos",
+            "Lesoto",
+            "Letonia",
+            "Líbano",
+            "Liberia",
+            "Libia",
+            "Liechtenstein",
+            "Lituania",
+            "Luxemburgo",
+            "Macedonia del Norte",
+            "Madagascar",
+            "Malasia",
+            "Malaui",
+            "Maldivas",
+            "Malí",
+            "Malta",
+            "Marruecos",
+            "Mauricio",
+            "Mauritania",
+            "México",
+            "Micronesia",
+            "Moldavia",
+            "Mónaco",
+            "Mongolia",
+            "Montenegro",
+            "Mozambique",
+            "Namibia",
+            "Nauru",
+            "Nepal",
+            "Nicaragua",
+            "Níger",
+            "Nigeria",
+            "Noruega",
+            "Nueva Zelanda",
+            "Omán",
+            "Países Bajos",
+            "Pakistán",
+            "Palaos",
+            "Panamá",
+            "Papúa Nueva Guinea",
+            "Paraguay",
+            "Perú",
+            "Polonia",
+            "Portugal",
+            "Reino Unido",
+            "República Centroafricana",
+            "República Checa",
+            "República del Congo",
+            "República Democrática del Congo",
+            "República Dominicana",
+            "Ruanda",
+            "Rumania",
+            "Rusia",
+            "Samoa",
+            "San Cristóbal y Nieves",
+            "San Marino",
+            "San Vicente y las Granadinas",
+            "Santa Lucía",
+            "Santo Tomé y Príncipe",
+            "Senegal",
+            "Serbia",
+            "Seychelles",
+            "Sierra Leona",
+            "Singapur",
+            "Siria",
+            "Somalia",
+            "Sri Lanka",
+            "Sudáfrica",
+            "Sudán",
+            "Sudán del Sur",
+            "Suecia",
+            "Suiza",
+            "Surinam",
+            "Tailandia",
+            "Tanzania",
+            "Tayikistán",
+            "Timor Oriental",
+            "Togo",
+            "Tonga",
+            "Trinidad y Tobago",
+            "Túnez",
+            "Turkmenistán",
+            "Turquía",
+            "Tuvalu",
+            "Ucrania",
+            "Uganda",
+            "Uruguay",
+            "Uzbekistán",
+            "Vanuatu",
+            "Vaticano",
+            "Venezuela",
+            "Vietnam",
+            "Yemen",
+            "Yibuti",
+            "Zambia",
+            "Zimbabue"});
+            this.comboBox1.Location = new System.Drawing.Point(433, 187);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(204, 29);
+            this.comboBox1.TabIndex = 78;
+            // 
             // AgregarAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(650, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnCancelarAdmin);
             this.Controls.Add(this.btnGuardarAdmin);
             this.Controls.Add(this.txtContacto);
@@ -515,7 +708,6 @@
             this.Controls.Add(this.txtRegion);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtCargo);
-            this.Controls.Add(this.txtPais);
             this.Controls.Add(this.txtCiudad);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtTelefono);
@@ -556,7 +748,6 @@
         public System.Windows.Forms.TextBox txtTelefono;
         public System.Windows.Forms.TextBox txtDireccion;
         public System.Windows.Forms.TextBox txtCiudad;
-        public System.Windows.Forms.TextBox txtPais;
         public System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.TextBox txtRegion;
@@ -578,5 +769,6 @@
         public System.Windows.Forms.TextBox txtContacto;
         private System.Windows.Forms.Button btnGuardarAdmin;
         private System.Windows.Forms.Button btnCancelarAdmin;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

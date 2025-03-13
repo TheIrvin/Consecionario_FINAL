@@ -596,6 +596,7 @@
             // 
             this.cboxPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxPais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboxPais.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxPais.FormattingEnabled = true;
             this.cboxPais.Items.AddRange(new object[] {
             "Afganistán",
@@ -793,7 +794,7 @@
             "Zimbabue"});
             this.cboxPais.Location = new System.Drawing.Point(71, 250);
             this.cboxPais.Name = "cboxPais";
-            this.cboxPais.Size = new System.Drawing.Size(132, 21);
+            this.cboxPais.Size = new System.Drawing.Size(132, 23);
             this.cboxPais.TabIndex = 37;
             // 
             // panel1

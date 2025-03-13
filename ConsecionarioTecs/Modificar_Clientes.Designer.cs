@@ -895,7 +895,7 @@
             // 
             // mFechaRegistroC
             // 
-            this.mFechaRegistroC.Location = new System.Drawing.Point(583, 305);
+            this.mFechaRegistroC.Location = new System.Drawing.Point(583, 302);
             this.mFechaRegistroC.Name = "mFechaRegistroC";
             this.mFechaRegistroC.Size = new System.Drawing.Size(118, 20);
             this.mFechaRegistroC.TabIndex = 43;

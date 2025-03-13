@@ -16,7 +16,7 @@ namespace ConsecionarioTecs
     public partial class AgregarMoto : Form
     {
 
-        string connectionString = "Server=THEIRVIN8\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=bbd_tecs;Password=123456;";
+        string connectionString = "Server=DESKTOP-9SMDLH8\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=AccesoChari;Password=accesochari;";
         byte[] imagenBytes = null; 
 
         public AgregarMoto()

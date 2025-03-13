@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace ConsecionarioTecs
 {
@@ -24,10 +25,12 @@ namespace ConsecionarioTecs
 
             public Conexion_BDD()
             {
-                Server = "ALXJANDR07\\SQLEXPRESS";
+
+                Server = "THEIRVIN\\SQLEXPRESS";
                 Database = "CompañiaTecsBDD";
-                Usuario = "AleAdmin";
-                Clave = "luis";
+                Usuario = "bbd_tecs";
+                Clave = "123456";
+
 
             }
 
@@ -79,13 +82,22 @@ namespace ConsecionarioTecs
 
         public bool insertarDatos(string Tabla, string Campos, string Datos)
         {
-            abrirConexion();
-            Cadena = "Insert into " + Tabla + " (" + Campos + ") values( " + Datos + ")";
-            oCom = new SqlCommand(Cadena, oCon);
-            oCom.ExecuteNonQuery();
-            cerrarConexion();
+            try
+            {
+                abrirConexion();
+                Cadena = "Insert into " + Tabla + " (" + Campos + ") values( " + Datos + ")";
+                oCom = new SqlCommand(Cadena, oCon);
+                oCom.ExecuteNonQuery();
+                cerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar datos: " + ex.Message);
+                return false;
+            }
             return true;
         }
+
 
         public bool actualizarDatos(string Tabla, string Datos, string Condicion)
         {

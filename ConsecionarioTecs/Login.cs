@@ -15,7 +15,8 @@ namespace ConsecionarioTecs
 {
     public partial class Login : Form
     {
-        string connectionString = "Server=ALXJANDR07\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=AleAdmin;Password=luis;";
+
+        string connectionString = "Server=THEIRVIN\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=bbd_tecs;Password=123456;";
         public Login()
         {
             InitializeComponent();
@@ -104,7 +105,7 @@ namespace ConsecionarioTecs
                     {
                         MessageBox.Show("¡Bienvenido Administrador!");
                         this.Hide();
-                        MenuAdmin adminForm = new MenuAdmin();
+                        AdminMenu adminForm = new AdminMenu();
                         adminForm.Show();
                         return;
                     }
@@ -133,36 +134,14 @@ namespace ConsecionarioTecs
             }
         }
 
-            //string usuario = txtUsuario.Text;
-            //string contraseña = txtContraseña.Text;
-
-            //if (usuario == "admin" && contraseña == "1234")
-            //{
-            //    MessageBox.Show("Acceso concedido","Exito", MessageBoxButtons.OK,MessageBoxIcon.Information);
-            //    MenuAdmin adminForm = new MenuAdmin();
-            //    adminForm.Show();
-            //    this.Hide();
-            //}
-            //else if (usuario=="cliente" && contraseña == "5678")
-            //{
-            //    MessageBox.Show("Bienvenido a Tecs", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    VistaCliente ClienteForm = new VistaCliente();
-            //    ClienteForm.Show();
-            //    this.Hide();
-            //}
-
-            //else
-            //{
-            //    MessageBox.Show("Usuario o Contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
+           
         private void btnCerrarLogin_Click(object sender, EventArgs e)
         {
             DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resultado == DialogResult.Yes)
             {
-                Application.Exit(); // Cierra toda la aplicación si el usuario confirma
+                Application.Exit(); 
             }
         }
 

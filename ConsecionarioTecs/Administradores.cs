@@ -30,7 +30,7 @@ namespace FormularioDeInicio
 
         private void tsbtnEliminarAdmin_Click(object sender, EventArgs e)
         {
-            if (dtgvContenedorAdministradores.RowCount > 0)//Validar que tengo alguna fila seleccionada
+            if (dtgvContenedorAdministradores.RowCount > 0)
             {
                 DialogResult opc = MessageBox.Show(this, "Se eliminará la fila " + dtgvContenedorAdministradores.CurrentRow.Index + ", que pertenece al administrador " + dtgvContenedorAdministradores[0, dtgvContenedorAdministradores.CurrentRow.Index].Value.ToString(), "Confirmación de Borrado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (opc == DialogResult.Yes)
@@ -145,5 +145,9 @@ namespace FormularioDeInicio
             e.HasMorePages = Bandera < dt.Rows.Count;
         }
 
+        private void dtgvContenedorAdministradores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

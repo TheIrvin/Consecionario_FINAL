@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarAdmin));
-            this.panelAggAdmin = new System.Windows.Forms.Panel();
-            this.btnCerrarA = new System.Windows.Forms.Button();
-            this.lblAggAdmin = new System.Windows.Forms.Label();
-            this.lblModificarAdmin = new System.Windows.Forms.Label();
-            this.lblIDAgg = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtRegion = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -46,7 +41,21 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNombreAdmin = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtCiudad = new System.Windows.Forms.TextBox();
+            this.txtPais = new System.Windows.Forms.TextBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtRegion = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtUsuarioAdmin = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,8 +64,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -67,10 +76,11 @@
             this.btnCancelarAdmin = new System.Windows.Forms.Button();
             this.cboxPaisUsu = new System.Windows.Forms.ComboBox();
             this.cboxCargo = new System.Windows.Forms.ComboBox();
+
             this.panelAggAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelAggAdmin
+            // txtID
             // 
             this.panelAggAdmin.BackColor = System.Drawing.SystemColors.Highlight;
             this.panelAggAdmin.Controls.Add(this.btnCerrarA);
@@ -84,6 +94,7 @@
             this.panelAggAdmin.Size = new System.Drawing.Size(714, 34);
             this.panelAggAdmin.TabIndex = 32;
             this.panelAggAdmin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelAggAdmin_MouseDown);
+
             // 
             // btnCerrarA
             // 
@@ -122,19 +133,21 @@
             this.lblModificarAdmin.TabIndex = 31;
             this.lblModificarAdmin.Text = "Modificar Usuario";
             this.lblModificarAdmin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+
             // 
-            // lblIDAgg
+            // label2
             // 
-            this.lblIDAgg.AutoSize = true;
-            this.lblIDAgg.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDAgg.Location = new System.Drawing.Point(365, 9);
-            this.lblIDAgg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblIDAgg.Name = "lblIDAgg";
-            this.lblIDAgg.Size = new System.Drawing.Size(32, 19);
-            this.lblIDAgg.TabIndex = 45;
-            this.lblIDAgg.Text = "ID:";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 58);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(232, 22);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Nombre del Administrador:";
             // 
-            // txtID
+            // label3
             // 
             this.txtID.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtID.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -155,8 +168,9 @@
             this.txtRegion.Name = "txtRegion";
             this.txtRegion.Size = new System.Drawing.Size(171, 29);
             this.txtRegion.TabIndex = 6;
+
             // 
-            // label11
+            // label4
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
@@ -178,10 +192,12 @@
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(171, 29);
             this.txtCiudad.TabIndex = 4;
+
             // 
             // txtDireccion
             // 
             this.txtDireccion.BackColor = System.Drawing.SystemColors.ControlLight;
+
             this.txtDireccion.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(106, 77);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -235,8 +251,9 @@
             this.label4.Size = new System.Drawing.Size(90, 22);
             this.label4.TabIndex = 50;
             this.label4.Text = "Teléfono :";
+
             // 
-            // label5
+            // txtPais
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
@@ -247,8 +264,9 @@
             this.label5.Size = new System.Drawing.Size(55, 22);
             this.label5.TabIndex = 49;
             this.label5.Text = "País :";
+
             // 
-            // label6
+            // txtCargo
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
@@ -259,8 +277,9 @@
             this.label6.Size = new System.Drawing.Size(74, 22);
             this.label6.TabIndex = 48;
             this.label6.Text = "Ciudad:";
+
             // 
-            // label3
+            // label11
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
@@ -271,8 +290,9 @@
             this.label3.Size = new System.Drawing.Size(67, 22);
             this.label3.TabIndex = 47;
             this.label3.Text = "Cargo:";
+
             // 
-            // label2
+            // txtRegion
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
@@ -283,6 +303,7 @@
             this.label2.Size = new System.Drawing.Size(86, 22);
             this.label2.TabIndex = 46;
             this.label2.Text = "Nombre ;";
+
             // 
             // label8
             // 
@@ -301,6 +322,7 @@
             this.txtUsuarioAdmin.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtUsuarioAdmin.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuarioAdmin.Location = new System.Drawing.Point(106, 330);
+
             this.txtUsuarioAdmin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsuarioAdmin.MaxLength = 50;
             this.txtUsuarioAdmin.Name = "txtUsuarioAdmin";
@@ -323,11 +345,13 @@
             // 
             this.txtContraseñaAdmin.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtContraseñaAdmin.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.txtContraseñaAdmin.Location = new System.Drawing.Point(436, 334);
             this.txtContraseñaAdmin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtContraseñaAdmin.MaxLength = 50;
             this.txtContraseñaAdmin.Name = "txtContraseñaAdmin";
             this.txtContraseñaAdmin.Size = new System.Drawing.Size(191, 29);
+
             this.txtContraseñaAdmin.TabIndex = 11;
             // 
             // panel2
@@ -371,6 +395,7 @@
             this.panel5.Size = new System.Drawing.Size(5, 26);
             this.panel5.TabIndex = 72;
             // 
+
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.Highlight;
@@ -378,6 +403,14 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(5, 26);
             this.panel6.TabIndex = 72;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel5.Location = new System.Drawing.Point(1, 195);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 26);
+            this.panel5.TabIndex = 72;
             // 
             // panel7
             // 
@@ -433,6 +466,7 @@
             this.txtSucursal.Name = "txtSucursal";
             this.txtSucursal.Size = new System.Drawing.Size(594, 29);
             this.txtSucursal.TabIndex = 5;
+
             // 
             // btnGuardarAdmin
             // 
@@ -455,6 +489,7 @@
             this.btnCancelarAdmin.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarAdmin.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCancelarAdmin.Location = new System.Drawing.Point(368, 381);
+
             this.btnCancelarAdmin.Name = "btnCancelarAdmin";
             this.btnCancelarAdmin.Size = new System.Drawing.Size(214, 43);
             this.btnCancelarAdmin.TabIndex = 13;
@@ -679,6 +714,7 @@
             this.cboxCargo.Size = new System.Drawing.Size(132, 21);
             this.cboxCargo.TabIndex = 79;
             // 
+
             // AgregarAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -687,6 +723,7 @@
             this.ClientSize = new System.Drawing.Size(714, 436);
             this.Controls.Add(this.cboxCargo);
             this.Controls.Add(this.cboxPaisUsu);
+
             this.Controls.Add(this.btnCancelarAdmin);
             this.Controls.Add(this.btnGuardarAdmin);
             this.Controls.Add(this.txtSucursal);
@@ -740,14 +777,27 @@
         public System.Windows.Forms.TextBox txtDireccion;
         public System.Windows.Forms.TextBox txtTelefono;
         public System.Windows.Forms.TextBox txtNombreAdmin;
+
         public System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblIDAgg;
+        public System.Windows.Forms.Label lblModificarAdmin;
+        public System.Windows.Forms.Label lblAggAdmin;
+        private System.Windows.Forms.Button btnCerrarA;
+        private System.Windows.Forms.Panel panelAggAdmin;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.TextBox txtNombreAdmin;
+        public System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.TextBox txtDireccion;
+        public System.Windows.Forms.TextBox txtCiudad;
+        public System.Windows.Forms.TextBox txtPais;
+        public System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.TextBox txtRegion;
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.TextBox txtUsuarioAdmin;
         private System.Windows.Forms.Label label9;
@@ -756,8 +806,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
@@ -770,5 +820,6 @@
         public System.Windows.Forms.Label lblModificarAdmin;
         public System.Windows.Forms.ComboBox cboxPaisUsu;
         public System.Windows.Forms.ComboBox cboxCargo;
+
     }
 }

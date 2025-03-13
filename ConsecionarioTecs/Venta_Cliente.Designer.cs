@@ -31,6 +31,7 @@
             this.lblxEst = new System.Windows.Forms.Label();
             this.lblEstadisticas1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bt_enviarPropuesta_ventaCliente = new System.Windows.Forms.Button();
             this.picBox_ventaCliente = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -78,7 +79,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_ventaCliente)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -113,7 +113,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.bt_enviarPropuesta_ventaCliente);
             this.groupBox1.Controls.Add(this.picBox_ventaCliente);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.groupBox4);
@@ -125,6 +125,18 @@
             this.groupBox1.Size = new System.Drawing.Size(754, 459);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
+            // 
+            // bt_enviarPropuesta_ventaCliente
+            // 
+            this.bt_enviarPropuesta_ventaCliente.BackColor = System.Drawing.Color.Black;
+            this.bt_enviarPropuesta_ventaCliente.ForeColor = System.Drawing.Color.White;
+            this.bt_enviarPropuesta_ventaCliente.Location = new System.Drawing.Point(666, 385);
+            this.bt_enviarPropuesta_ventaCliente.Name = "bt_enviarPropuesta_ventaCliente";
+            this.bt_enviarPropuesta_ventaCliente.Size = new System.Drawing.Size(83, 41);
+            this.bt_enviarPropuesta_ventaCliente.TabIndex = 29;
+            this.bt_enviarPropuesta_ventaCliente.Text = "Enviar Propuesta";
+            this.bt_enviarPropuesta_ventaCliente.UseVisualStyleBackColor = false;
+            this.bt_enviarPropuesta_ventaCliente.Click += new System.EventHandler(this.bt_enviarPropuesta_ventaCliente_Click);
             // 
             // picBox_ventaCliente
             // 
@@ -674,16 +686,7 @@
             this.label34.TabIndex = 3;
             this.label34.Text = "X";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(666, 181);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 27);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Enviar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // Compras
+            // Venta_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -693,7 +696,7 @@
             this.Controls.Add(this.lblxEst);
             this.Controls.Add(this.lblEstadisticas1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Compras";
+            this.Name = "Venta_Cliente";
             this.Text = "Compras";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBox_ventaCliente)).EndInit();
@@ -764,6 +767,6 @@
         private System.Windows.Forms.Button bt_aggImagen_ventaMoto;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox picBox_ventaCliente;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bt_enviarPropuesta_ventaCliente;
     }
 }

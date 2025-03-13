@@ -15,8 +15,10 @@ namespace ConsecionarioTecs
 {
     public partial class AgregarMoto : Form
     {
-        string connectionString = "Server=ALXJANDR07\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=AleAdmin;Password=luis;";
-        byte[] imagenBytes = null; // Para almacenar la imagen
+
+        string connectionString = "Server=THEIRVIN8\\SQLEXPRESS;Database=CompañiaTecsBDD;User id=bbd_tecs;Password=123456;";
+        byte[] imagenBytes = null; 
+
         public AgregarMoto()
         {
             InitializeComponent();
@@ -39,7 +41,7 @@ namespace ConsecionarioTecs
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 pbImagenMoto.Image = System.Drawing.Image.FromFile(ofd.FileName);
-                imagenBytes = File.ReadAllBytes(ofd.FileName); // Convertir imagen a bytes
+                imagenBytes = File.ReadAllBytes(ofd.FileName);
             }
         }
 
